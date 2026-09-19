@@ -1,0 +1,15 @@
+model: mistral-small-2603
+dataset_version: v1.3
+gold_version: v1.1
+prompt_protocol_version: v1.1
+temperature: 0.0
+top_p: 1.0
+random_seed: 42
+max_output_tokens: 128
+run_order_seed: 20260918
+conversation_state: none
+tools: none
+web_search: false
+rag: false
+primary_runs: 324
+dry_run_count: 9
