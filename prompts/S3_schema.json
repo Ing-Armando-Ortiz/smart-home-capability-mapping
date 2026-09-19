@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "properties": {
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "power_control",
+          "brightness_control",
+          "color_control",
+          "color_temperature_control",
+          "temperature_sensing",
+          "humidity_sensing",
+          "motion_detection",
+          "occupancy_detection",
+          "lock_control",
+          "door_state_sensing",
+          "temperature_setpoint_control",
+          "hvac_mode_control",
+          "fan_control",
+          "power_sensing",
+          "energy_consumption_sensing",
+          "battery_level_sensing"
+        ]
+      },
+      "uniqueItems": true
+    }
+  },
+  "required": ["capabilities"],
+  "additionalProperties": false
+}
