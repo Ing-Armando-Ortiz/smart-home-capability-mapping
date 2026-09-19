@@ -1,0 +1,12 @@
+.env
+.env.*
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+results/raw/*.jsonl
+results/raw/*.csv
+!results/raw/.gitkeep
+results/processed/*.csv
+results/processed/*.json
+!results/processed/.gitkeep
