@@ -1,0 +1,233 @@
+instance_id,case_id,representation,device_family,input_text,gold_capabilities,gold_count
+L01_R1_NL,L01,R1_NL,Smart light,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted.",power_control; brightness_control,2
+L01_R2_STRUCTURED,L01,R2_STRUCTURED,Smart light,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true}}}",power_control; brightness_control,2
+L01_R3_API_TELEMETRY,L01,R3_API_TELEMETRY,Smart light,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)",power_control; brightness_control,2
+L02_R1_NL,L02,R1_NL,Smart light,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted, its white color temperature can be changed.",power_control; brightness_control; color_temperature_control,3
+L02_R2_STRUCTURED,L02,R2_STRUCTURED,Smart light,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true},""color_temp"":{""type"":""number"",""unit"":""mired"",""read"":true,""write"":true}}}",power_control; brightness_control; color_temperature_control,3
+L02_R3_API_TELEMETRY,L02,R3_API_TELEMETRY,Smart light,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)
+get_color_temp() -> mired
+set_color_temp(value:mired)",power_control; brightness_control; color_temperature_control,3
+L03_R1_NL,L03,R1_NL,Smart light,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted, its emitted color can be selected using color coordinates.",power_control; brightness_control; color_control,3
+L03_R2_STRUCTURED,L03,R2_STRUCTURED,Smart light,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true},""color_xy"":{""type"":""object"",""fields"":[""x"",""y""],""read"":true,""write"":true}}}",power_control; brightness_control; color_control,3
+L03_R3_API_TELEMETRY,L03,R3_API_TELEMETRY,Smart light,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)
+get_color_xy() -> {x,y}
+set_color_xy(x,y)",power_control; brightness_control; color_control,3
+L04_R1_NL,L04,R1_NL,Smart light,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted, its white color temperature can be changed.",power_control; brightness_control; color_temperature_control,3
+L04_R2_STRUCTURED,L04,R2_STRUCTURED,Smart light,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true},""color_temp"":{""type"":""number"",""unit"":""mired"",""read"":true,""write"":true}}}",power_control; brightness_control; color_temperature_control,3
+L04_R3_API_TELEMETRY,L04,R3_API_TELEMETRY,Smart light,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)
+get_color_temp() -> mired
+set_color_temp(value:mired)",power_control; brightness_control; color_temperature_control,3
+L05_R1_NL,L05,R1_NL,Smart light,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted, its white color temperature can be changed, its emitted color can be selected using color coordinates.",power_control; brightness_control; color_temperature_control; color_control,4
+L05_R2_STRUCTURED,L05,R2_STRUCTURED,Smart light,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true},""color_temp"":{""type"":""number"",""unit"":""mired"",""read"":true,""write"":true},""color_xy"":{""type"":""object"",""fields"":[""x"",""y""],""read"":true,""write"":true}}}",power_control; brightness_control; color_temperature_control; color_control,4
+L05_R3_API_TELEMETRY,L05,R3_API_TELEMETRY,Smart light,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)
+get_color_temp() -> mired
+set_color_temp(value:mired)
+get_color_xy() -> {x,y}
+set_color_xy(x,y)",power_control; brightness_control; color_temperature_control; color_control,4
+L06_R1_NL,L06,R1_NL,Smart light,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted, its white color temperature can be changed, its emitted color can be selected using color coordinates.",power_control; brightness_control; color_temperature_control; color_control,4
+L06_R2_STRUCTURED,L06,R2_STRUCTURED,Smart light,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true},""color_temp"":{""type"":""number"",""unit"":""mired"",""read"":true,""write"":true},""color_xy"":{""type"":""object"",""fields"":[""x"",""y""],""read"":true,""write"":true},""color_hs"":{""type"":""object"",""fields"":[""hue"",""saturation""],""read"":true,""write"":true}}}",power_control; brightness_control; color_temperature_control; color_control,4
+L06_R3_API_TELEMETRY,L06,R3_API_TELEMETRY,Smart light,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)
+get_color_temp() -> mired
+set_color_temp(value:mired)
+get_color_xy() -> {x,y}
+set_color_xy(x,y)
+get_color_hs() -> {hue,saturation}
+set_color_hs(hue,saturation)",power_control; brightness_control; color_temperature_control; color_control,4
+P01_R1_NL,P01,R1_NL,Smart plug,The device is a smart outlet where the outlet state can be switched on or off.,power_control,1
+P01_R2_STRUCTURED,P01,R2_STRUCTURED,Smart plug,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true}}}",power_control,1
+P01_R3_API_TELEMETRY,P01,R3_API_TELEMETRY,Smart plug,"get_state() -> ON|OFF
+set_state(ON|OFF)",power_control,1
+P02_R1_NL,P02,R1_NL,Smart plug,The device is a smart outlet where the outlet state can be switched on or off.,power_control,1
+P02_R2_STRUCTURED,P02,R2_STRUCTURED,Smart plug,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true}}}",power_control,1
+P02_R3_API_TELEMETRY,P02,R3_API_TELEMETRY,Smart plug,"get_state() -> ON|OFF
+set_state(ON|OFF)",power_control,1
+P03_R1_NL,P03,R1_NL,Smart plug,"The device is a smart outlet where the outlet state can be switched on or off, instantaneous electrical power is reported, accumulated energy consumption is reported.",power_control; power_sensing; energy_consumption_sensing,3
+P03_R2_STRUCTURED,P03,R2_STRUCTURED,Smart plug,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""power"":{""type"":""number"",""unit"":""W"",""read"":true,""write"":false},""energy"":{""type"":""number"",""unit"":""kWh"",""read"":true,""write"":false}}}",power_control; power_sensing; energy_consumption_sensing,3
+P03_R3_API_TELEMETRY,P03,R3_API_TELEMETRY,Smart plug,"get_state() -> ON|OFF
+set_state(ON|OFF)
+power -> number W
+energy -> number kWh",power_control; power_sensing; energy_consumption_sensing,3
+P04_R1_NL,P04,R1_NL,Smart plug,"The device is a smart outlet where the outlet state can be switched on or off, instantaneous electrical power is reported, accumulated energy consumption is reported.",power_control; power_sensing; energy_consumption_sensing,3
+P04_R2_STRUCTURED,P04,R2_STRUCTURED,Smart plug,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""power"":{""type"":""number"",""unit"":""W"",""read"":true,""write"":false},""energy"":{""type"":""number"",""unit"":""kWh"",""read"":true,""write"":false}}}",power_control; power_sensing; energy_consumption_sensing,3
+P04_R3_API_TELEMETRY,P04,R3_API_TELEMETRY,Smart plug,"get_state() -> ON|OFF
+set_state(ON|OFF)
+power -> number W
+energy -> number kWh",power_control; power_sensing; energy_consumption_sensing,3
+P05_R1_NL,P05,R1_NL,Smart plug,"The device is a smart outlet where the outlet state can be switched on or off, instantaneous electrical power is reported, accumulated energy consumption is reported.",power_control; power_sensing; energy_consumption_sensing,3
+P05_R2_STRUCTURED,P05,R2_STRUCTURED,Smart plug,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""power"":{""type"":""number"",""unit"":""W"",""read"":true,""write"":false},""energy"":{""type"":""number"",""unit"":""kWh"",""read"":true,""write"":false}}}",power_control; power_sensing; energy_consumption_sensing,3
+P05_R3_API_TELEMETRY,P05,R3_API_TELEMETRY,Smart plug,"get_state() -> ON|OFF
+set_state(ON|OFF)
+power -> number W
+energy -> number kWh",power_control; power_sensing; energy_consumption_sensing,3
+P06_R1_NL,P06,R1_NL,Smart plug,"The device is a smart outlet where the outlet state can be switched on or off, instantaneous electrical power is reported, accumulated energy consumption is reported.",power_control; power_sensing; energy_consumption_sensing,3
+P06_R2_STRUCTURED,P06,R2_STRUCTURED,Smart plug,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""power"":{""type"":""number"",""unit"":""W"",""read"":true,""write"":false},""energy"":{""type"":""number"",""unit"":""kWh"",""read"":true,""write"":false}}}",power_control; power_sensing; energy_consumption_sensing,3
+P06_R3_API_TELEMETRY,P06,R3_API_TELEMETRY,Smart plug,"get_state() -> ON|OFF
+set_state(ON|OFF)
+power -> number W
+energy -> number kWh",power_control; power_sensing; energy_consumption_sensing,3
+E01_R1_NL,E01,R1_NL,Environmental sensor,"The device publishes measured temperature, remaining battery percentage.",temperature_sensing; battery_level_sensing,2
+E01_R2_STRUCTURED,E01,R2_STRUCTURED,Environmental sensor,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",temperature_sensing; battery_level_sensing,2
+E01_R3_API_TELEMETRY,E01,R3_API_TELEMETRY,Environmental sensor,"temperature -> number °C
+battery -> integer 0..100 %",temperature_sensing; battery_level_sensing,2
+E02_R1_NL,E02,R1_NL,Environmental sensor,"The device publishes measured temperature, relative humidity, remaining battery percentage.",temperature_sensing; humidity_sensing; battery_level_sensing,3
+E02_R2_STRUCTURED,E02,R2_STRUCTURED,Environmental sensor,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""humidity"":{""type"":""number"",""unit"":""%"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",temperature_sensing; humidity_sensing; battery_level_sensing,3
+E02_R3_API_TELEMETRY,E02,R3_API_TELEMETRY,Environmental sensor,"temperature -> number °C
+humidity -> number %
+battery -> integer 0..100 %",temperature_sensing; humidity_sensing; battery_level_sensing,3
+E03_R1_NL,E03,R1_NL,Environmental sensor,"The device publishes measured temperature, relative humidity, remaining battery percentage.",temperature_sensing; humidity_sensing; battery_level_sensing,3
+E03_R2_STRUCTURED,E03,R2_STRUCTURED,Environmental sensor,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""humidity"":{""type"":""number"",""unit"":""%"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",temperature_sensing; humidity_sensing; battery_level_sensing,3
+E03_R3_API_TELEMETRY,E03,R3_API_TELEMETRY,Environmental sensor,"temperature -> number °C
+humidity -> number %
+battery -> integer 0..100 %",temperature_sensing; humidity_sensing; battery_level_sensing,3
+E04_R1_NL,E04,R1_NL,Environmental sensor,"The device publishes measured temperature, relative humidity, remaining battery percentage.",temperature_sensing; humidity_sensing; battery_level_sensing,3
+E04_R2_STRUCTURED,E04,R2_STRUCTURED,Environmental sensor,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""humidity"":{""type"":""number"",""unit"":""%"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",temperature_sensing; humidity_sensing; battery_level_sensing,3
+E04_R3_API_TELEMETRY,E04,R3_API_TELEMETRY,Environmental sensor,"temperature -> number °C
+humidity -> number %
+battery -> integer 0..100 %",temperature_sensing; humidity_sensing; battery_level_sensing,3
+E05_R1_NL,E05,R1_NL,Environmental sensor,"The device publishes measured temperature, relative humidity, remaining battery percentage.",temperature_sensing; humidity_sensing; battery_level_sensing,3
+E05_R2_STRUCTURED,E05,R2_STRUCTURED,Environmental sensor,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""humidity"":{""type"":""number"",""unit"":""%"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",temperature_sensing; humidity_sensing; battery_level_sensing,3
+E05_R3_API_TELEMETRY,E05,R3_API_TELEMETRY,Environmental sensor,"temperature -> number °C
+humidity -> number %
+battery -> integer 0..100 %",temperature_sensing; humidity_sensing; battery_level_sensing,3
+E06_R1_NL,E06,R1_NL,Environmental sensor,"The device publishes measured temperature, relative humidity, remaining battery percentage.",temperature_sensing; humidity_sensing; battery_level_sensing,3
+E06_R2_STRUCTURED,E06,R2_STRUCTURED,Environmental sensor,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""humidity"":{""type"":""number"",""unit"":""%"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",temperature_sensing; humidity_sensing; battery_level_sensing,3
+E06_R3_API_TELEMETRY,E06,R3_API_TELEMETRY,Environmental sensor,"temperature -> number °C
+humidity -> number %
+battery -> integer 0..100 %",temperature_sensing; humidity_sensing; battery_level_sensing,3
+M01_R1_NL,M01,R1_NL,Motion/presence sensor,"The device is documented as pir motion sensor. It exposes an occupancy-style binary signal, battery percentage.",motion_detection; battery_level_sensing,2
+M01_R2_STRUCTURED,M01,R2_STRUCTURED,Motion/presence sensor,"{""properties"":{""occupancy"":{""type"":""boolean"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",motion_detection; battery_level_sensing,2
+M01_R3_API_TELEMETRY,M01,R3_API_TELEMETRY,Motion/presence sensor,"occupancy -> boolean
+battery -> integer 0..100 %",motion_detection; battery_level_sensing,2
+M02_R1_NL,M02,R1_NL,Motion/presence sensor,"The device is documented as device is documented as a motion sensor while reporting a binary occupancy property and battery percentage. It exposes an occupancy-style binary signal, battery percentage.",motion_detection; battery_level_sensing,2
+M02_R2_STRUCTURED,M02,R2_STRUCTURED,Motion/presence sensor,"{""description"":""Zigbee PIR sensor"",""properties"":{""occupancy"":{""type"":""boolean"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",motion_detection; battery_level_sensing,2
+M02_R3_API_TELEMETRY,M02,R3_API_TELEMETRY,Motion/presence sensor,"device_description -> Zigbee PIR sensor
+occupancy -> boolean
+battery -> integer 0..100 %",motion_detection; battery_level_sensing,2
+M03_R1_NL,M03,R1_NL,Motion/presence sensor,"The device is documented as smart motion sensor using an occupancy-style binary report and exposing battery level. It exposes an occupancy-style binary signal, battery percentage.",motion_detection; battery_level_sensing,2
+M03_R2_STRUCTURED,M03,R2_STRUCTURED,Motion/presence sensor,"{""description"":""Motion sensor"",""properties"":{""occupancy"":{""type"":""boolean"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",motion_detection; battery_level_sensing,2
+M03_R3_API_TELEMETRY,M03,R3_API_TELEMETRY,Motion/presence sensor,"device_description -> Motion sensor
+occupancy -> boolean
+battery -> integer 0..100 %",motion_detection; battery_level_sensing,2
+M04_R1_NL,M04,R1_NL,Motion/presence sensor,"The device is documented as smart presence sensor exposing binary occupancy and battery percentage. It exposes an occupancy-style binary signal, battery percentage.",occupancy_detection; battery_level_sensing,2
+M04_R2_STRUCTURED,M04,R2_STRUCTURED,Motion/presence sensor,"{""description"":""Smart motion sensor"",""properties"":{""occupancy"":{""type"":""boolean"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",occupancy_detection; battery_level_sensing,2
+M04_R3_API_TELEMETRY,M04,R3_API_TELEMETRY,Motion/presence sensor,"device_description -> Smart motion sensor
+occupancy -> boolean
+battery -> integer 0..100 %",occupancy_detection; battery_level_sensing,2
+M05_R1_NL,M05,R1_NL,Motion/presence sensor,"The device is documented as human presence sensor exposing a presence boolean and battery percentage. It exposes a presence boolean, battery percentage.",occupancy_detection; battery_level_sensing,2
+M05_R2_STRUCTURED,M05,R2_STRUCTURED,Motion/presence sensor,"{""properties"":{""presence"":{""type"":""boolean"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",occupancy_detection; battery_level_sensing,2
+M05_R3_API_TELEMETRY,M05,R3_API_TELEMETRY,Motion/presence sensor,"presence -> boolean
+battery -> integer 0..100 %",occupancy_detection; battery_level_sensing,2
+M06_R1_NL,M06,R1_NL,Motion/presence sensor,"The device is documented as human-presence sensor exposing presence plus motion_state and battery. It exposes a presence boolean, a motion_state value, battery percentage.",occupancy_detection; motion_detection; battery_level_sensing,3
+M06_R2_STRUCTURED,M06,R2_STRUCTURED,Motion/presence sensor,"{""properties"":{""presence"":{""type"":""boolean"",""read"":true,""write"":false},""motion_state"":{""type"":""enum"",""values"":[""none"",""static"",""small"",""large""],""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",occupancy_detection; motion_detection; battery_level_sensing,3
+M06_R3_API_TELEMETRY,M06,R3_API_TELEMETRY,Motion/presence sensor,"presence -> boolean
+motion_state -> none|static|small|large
+battery -> integer 0..100 %",occupancy_detection; motion_detection; battery_level_sensing,3
+K01_R1_NL,K01,R1_NL,Smart lock,"The device exposes a lock-status value and an explicit unlock operation, remaining battery level.",lock_control; battery_level_sensing,2
+K01_R2_STRUCTURED,K01,R2_STRUCTURED,Smart lock,"{""properties"":{""lock_status"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""unlock_door"":{""type"":""command"",""write"":true},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",lock_control; battery_level_sensing,2
+K01_R3_API_TELEMETRY,K01,R3_API_TELEMETRY,Smart lock,"lock_status -> locked|unlocked
+unlock_door(pin)
+battery -> integer 0..100 %",lock_control; battery_level_sensing,2
+K02_R1_NL,K02,R1_NL,Smart lock,"The device exposes lock/unlock state and control, remaining battery level.",lock_control; battery_level_sensing,2
+K02_R2_STRUCTURED,K02,R2_STRUCTURED,Smart lock,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""lock"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",lock_control; battery_level_sensing,2
+K02_R3_API_TELEMETRY,K02,R3_API_TELEMETRY,Smart lock,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_lock_state() -> locked|unlocked
+set_lock_state(locked|unlocked)
+battery -> integer 0..100 %",lock_control; battery_level_sensing,2
+K03_R1_NL,K03,R1_NL,Smart lock,"The device exposes lock/unlock state and control, remaining battery level.",lock_control; battery_level_sensing,2
+K03_R2_STRUCTURED,K03,R2_STRUCTURED,Smart lock,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""lock"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",lock_control; battery_level_sensing,2
+K03_R3_API_TELEMETRY,K03,R3_API_TELEMETRY,Smart lock,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_lock_state() -> locked|unlocked
+set_lock_state(locked|unlocked)
+battery -> integer 0..100 %",lock_control; battery_level_sensing,2
+K04_R1_NL,K04,R1_NL,Smart lock,"The device exposes lock/unlock state and control, a separate physical door-state value, remaining battery level.",lock_control; door_state_sensing; battery_level_sensing,3
+K04_R2_STRUCTURED,K04,R2_STRUCTURED,Smart lock,"{""properties"":{""lock"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""door_state"":{""type"":""enum"",""values"":[""open"",""closed""],""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",lock_control; door_state_sensing; battery_level_sensing,3
+K04_R3_API_TELEMETRY,K04,R3_API_TELEMETRY,Smart lock,"get_lock_state() -> locked|unlocked
+set_lock_state(locked|unlocked)
+door_state -> open|closed
+battery -> integer 0..100 %",lock_control; door_state_sensing; battery_level_sensing,3
+K05_R1_NL,K05,R1_NL,Smart lock,"The device exposes lock/unlock state and control, a separate physical door-state value, remaining battery level.",lock_control; door_state_sensing; battery_level_sensing,3
+K05_R2_STRUCTURED,K05,R2_STRUCTURED,Smart lock,"{""properties"":{""lock"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""door_state"":{""type"":""enum"",""values"":[""open"",""closed""],""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",lock_control; door_state_sensing; battery_level_sensing,3
+K05_R3_API_TELEMETRY,K05,R3_API_TELEMETRY,Smart lock,"get_lock_state() -> locked|unlocked
+set_lock_state(locked|unlocked)
+door_state -> open|closed
+battery -> integer 0..100 %",lock_control; door_state_sensing; battery_level_sensing,3
+K06_R1_NL,K06,R1_NL,Smart lock,"The device exposes lock/unlock state and control, remaining battery level.",lock_control; battery_level_sensing,2
+K06_R2_STRUCTURED,K06,R2_STRUCTURED,Smart lock,"{""properties"":{""lock"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",lock_control; battery_level_sensing,2
+K06_R3_API_TELEMETRY,K06,R3_API_TELEMETRY,Smart lock,"get_lock_state() -> locked|unlocked
+set_lock_state(locked|unlocked)
+battery -> integer 0..100 %",lock_control; battery_level_sensing,2
+T01_R1_NL,T01,R1_NL,Thermostat/HVAC,"The device exposes local_temperature, one or more writable temperature setpoints, system_mode.",temperature_sensing; temperature_setpoint_control; hvac_mode_control,3
+T01_R2_STRUCTURED,T01,R2_STRUCTURED,Thermostat/HVAC,"{""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""heat"",""cool"",""auto""],""read"":true,""write"":true}}}",temperature_sensing; temperature_setpoint_control; hvac_mode_control,3
+T01_R3_API_TELEMETRY,T01,R3_API_TELEMETRY,Thermostat/HVAC,"local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+system_mode -> off|heat|cool|auto
+set_system_mode(mode)",temperature_sensing; temperature_setpoint_control; hvac_mode_control,3
+T02_R1_NL,T02,R1_NL,Thermostat/HVAC,"The device is a thermostat that reports local_temperature, allows a temperature setpoint to be changed, exposes system_mode, and provides a separate ON/OFF state that can be read and written.",temperature_sensing; temperature_setpoint_control; hvac_mode_control; power_control,4
+T02_R2_STRUCTURED,T02,R2_STRUCTURED,Thermostat/HVAC,"{""description"":""Thermostat"",""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""auto"",""heat""],""read"":true,""write"":true},""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true}}}",temperature_sensing; temperature_setpoint_control; hvac_mode_control; power_control,4
+T02_R3_API_TELEMETRY,T02,R3_API_TELEMETRY,Thermostat/HVAC,"device_description -> Thermostat
+local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+system_mode -> off|auto|heat
+set_system_mode(mode)
+get_state() -> ON|OFF
+set_state(ON|OFF)",temperature_sensing; temperature_setpoint_control; hvac_mode_control; power_control,4
+T03_R1_NL,T03,R1_NL,Thermostat/HVAC,"The device exposes local_temperature, one or more writable temperature setpoints, system_mode.",temperature_sensing; temperature_setpoint_control; hvac_mode_control,3
+T03_R2_STRUCTURED,T03,R2_STRUCTURED,Thermostat/HVAC,"{""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""occupied_cooling_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""heat"",""cool"",""auto""],""read"":true,""write"":true}}}",temperature_sensing; temperature_setpoint_control; hvac_mode_control,3
+T03_R3_API_TELEMETRY,T03,R3_API_TELEMETRY,Thermostat/HVAC,"local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+occupied_cooling_setpoint -> °C
+set_cooling_setpoint(value:°C)
+system_mode -> off|heat|cool|auto
+set_system_mode(mode)",temperature_sensing; temperature_setpoint_control; hvac_mode_control,3
+T04_R1_NL,T04,R1_NL,Thermostat/HVAC,"The device exposes local_temperature, one or more writable temperature setpoints, system_mode, fan_mode.",temperature_sensing; temperature_setpoint_control; hvac_mode_control; fan_control,4
+T04_R2_STRUCTURED,T04,R2_STRUCTURED,Thermostat/HVAC,"{""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""occupied_cooling_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""heat"",""cool"",""auto""],""read"":true,""write"":true},""fan_mode"":{""type"":""enum"",""values"":[""auto"",""low"",""medium"",""high""],""read"":true,""write"":true}}}",temperature_sensing; temperature_setpoint_control; hvac_mode_control; fan_control,4
+T04_R3_API_TELEMETRY,T04,R3_API_TELEMETRY,Thermostat/HVAC,"local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+occupied_cooling_setpoint -> °C
+set_cooling_setpoint(value:°C)
+system_mode -> off|heat|cool|auto
+set_system_mode(mode)
+fan_mode -> auto|low|medium|high
+set_fan_mode(mode)",temperature_sensing; temperature_setpoint_control; hvac_mode_control; fan_control,4
+T05_R1_NL,T05,R1_NL,Thermostat/HVAC,"The device exposes local_temperature, one or more writable temperature setpoints, system_mode, fan_mode.",temperature_sensing; temperature_setpoint_control; hvac_mode_control; fan_control,4
+T05_R2_STRUCTURED,T05,R2_STRUCTURED,Thermostat/HVAC,"{""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""heat"",""cool"",""auto""],""read"":true,""write"":true},""fan_mode"":{""type"":""enum"",""values"":[""auto"",""low"",""medium"",""high""],""read"":true,""write"":true}}}",temperature_sensing; temperature_setpoint_control; hvac_mode_control; fan_control,4
+T05_R3_API_TELEMETRY,T05,R3_API_TELEMETRY,Thermostat/HVAC,"local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+system_mode -> off|heat|cool|auto
+set_system_mode(mode)
+fan_mode -> auto|low|medium|high
+set_fan_mode(mode)",temperature_sensing; temperature_setpoint_control; hvac_mode_control; fan_control,4
+T06_R1_NL,T06,R1_NL,Thermostat/HVAC,"The device exposes local_temperature, one or more writable temperature setpoints, system_mode, fan_mode.",temperature_sensing; temperature_setpoint_control; hvac_mode_control; fan_control,4
+T06_R2_STRUCTURED,T06,R2_STRUCTURED,Thermostat/HVAC,"{""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""heat"",""cool"",""auto""],""read"":true,""write"":true},""fan_mode"":{""type"":""enum"",""values"":[""auto"",""low"",""medium"",""high""],""read"":true,""write"":true}}}",temperature_sensing; temperature_setpoint_control; hvac_mode_control; fan_control,4
+T06_R3_API_TELEMETRY,T06,R3_API_TELEMETRY,Thermostat/HVAC,"local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+system_mode -> off|heat|cool|auto
+set_system_mode(mode)
+fan_mode -> auto|low|medium|high
+set_fan_mode(mode)",temperature_sensing; temperature_setpoint_control; hvac_mode_control; fan_control,4

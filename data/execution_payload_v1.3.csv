@@ -1,0 +1,697 @@
+run_order,run_id,instance_id,case_id,representation,strategy_id,prompt_key,input_text,model_version,temperature,max_output_tokens,status
+1,RUN-001,K03_R1_NL,K03,R1_NL,S3,S3,"The device exposes lock/unlock state and control, remaining battery level.",TO_BE_SELECTED,0,128,PENDING
+2,RUN-002,E05_R3_API_TELEMETRY,E05,R3_API_TELEMETRY,S2,S2,"temperature -> number °C
+humidity -> number %
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+3,RUN-003,K05_R3_API_TELEMETRY,K05,R3_API_TELEMETRY,S1,S1,"get_lock_state() -> locked|unlocked
+set_lock_state(locked|unlocked)
+door_state -> open|closed
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+4,RUN-004,M06_R3_API_TELEMETRY,M06,R3_API_TELEMETRY,S3,S3,"presence -> boolean
+motion_state -> none|static|small|large
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+5,RUN-005,K01_R3_API_TELEMETRY,K01,R3_API_TELEMETRY,S3,S3,"lock_status -> locked|unlocked
+unlock_door(pin)
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+6,RUN-006,E06_R1_NL,E06,R1_NL,S1,S1,"The device publishes measured temperature, relative humidity, remaining battery percentage.",TO_BE_SELECTED,0,128,PENDING
+7,RUN-007,T05_R2_STRUCTURED,T05,R2_STRUCTURED,S3,S3,"{""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""heat"",""cool"",""auto""],""read"":true,""write"":true},""fan_mode"":{""type"":""enum"",""values"":[""auto"",""low"",""medium"",""high""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+8,RUN-008,M04_R1_NL,M04,R1_NL,S3,S3,"The device is documented as smart presence sensor exposing binary occupancy and battery percentage. It exposes an occupancy-style binary signal, battery percentage.",TO_BE_SELECTED,0,128,PENDING
+9,RUN-009,L03_R2_STRUCTURED,L03,R2_STRUCTURED,S1,S1,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true},""color_xy"":{""type"":""object"",""fields"":[""x"",""y""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+10,RUN-010,P04_R3_API_TELEMETRY,P04,R3_API_TELEMETRY,S3,S3,"get_state() -> ON|OFF
+set_state(ON|OFF)
+power -> number W
+energy -> number kWh",TO_BE_SELECTED,0,128,PENDING
+11,RUN-011,E01_R2_STRUCTURED,E01,R2_STRUCTURED,S2,S2,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+12,RUN-012,P04_R2_STRUCTURED,P04,R2_STRUCTURED,S3,S3,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""power"":{""type"":""number"",""unit"":""W"",""read"":true,""write"":false},""energy"":{""type"":""number"",""unit"":""kWh"",""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+13,RUN-013,M06_R1_NL,M06,R1_NL,S1,S1,"The device is documented as human-presence sensor exposing presence plus motion_state and battery. It exposes a presence boolean, a motion_state value, battery percentage.",TO_BE_SELECTED,0,128,PENDING
+14,RUN-014,L01_R2_STRUCTURED,L01,R2_STRUCTURED,S3,S3,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+15,RUN-015,L05_R2_STRUCTURED,L05,R2_STRUCTURED,S2,S2,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true},""color_temp"":{""type"":""number"",""unit"":""mired"",""read"":true,""write"":true},""color_xy"":{""type"":""object"",""fields"":[""x"",""y""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+16,RUN-016,L01_R3_API_TELEMETRY,L01,R3_API_TELEMETRY,S1,S1,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)",TO_BE_SELECTED,0,128,PENDING
+17,RUN-017,M04_R1_NL,M04,R1_NL,S2,S2,"The device is documented as smart presence sensor exposing binary occupancy and battery percentage. It exposes an occupancy-style binary signal, battery percentage.",TO_BE_SELECTED,0,128,PENDING
+18,RUN-018,K03_R3_API_TELEMETRY,K03,R3_API_TELEMETRY,S1,S1,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_lock_state() -> locked|unlocked
+set_lock_state(locked|unlocked)
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+19,RUN-019,P06_R1_NL,P06,R1_NL,S2,S2,"The device is a smart outlet where the outlet state can be switched on or off, instantaneous electrical power is reported, accumulated energy consumption is reported.",TO_BE_SELECTED,0,128,PENDING
+20,RUN-020,M01_R3_API_TELEMETRY,M01,R3_API_TELEMETRY,S1,S1,"occupancy -> boolean
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+21,RUN-021,L05_R1_NL,L05,R1_NL,S2,S2,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted, its white color temperature can be changed, its emitted color can be selected using color coordinates.",TO_BE_SELECTED,0,128,PENDING
+22,RUN-022,L03_R3_API_TELEMETRY,L03,R3_API_TELEMETRY,S3,S3,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)
+get_color_xy() -> {x,y}
+set_color_xy(x,y)",TO_BE_SELECTED,0,128,PENDING
+23,RUN-023,M01_R1_NL,M01,R1_NL,S1,S1,"The device is documented as pir motion sensor. It exposes an occupancy-style binary signal, battery percentage.",TO_BE_SELECTED,0,128,PENDING
+24,RUN-024,T04_R2_STRUCTURED,T04,R2_STRUCTURED,S1,S1,"{""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""occupied_cooling_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""heat"",""cool"",""auto""],""read"":true,""write"":true},""fan_mode"":{""type"":""enum"",""values"":[""auto"",""low"",""medium"",""high""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+25,RUN-025,M04_R3_API_TELEMETRY,M04,R3_API_TELEMETRY,S3,S3,"device_description -> Smart motion sensor
+occupancy -> boolean
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+26,RUN-026,E04_R2_STRUCTURED,E04,R2_STRUCTURED,S2,S2,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""humidity"":{""type"":""number"",""unit"":""%"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+27,RUN-027,T02_R2_STRUCTURED,T02,R2_STRUCTURED,S2,S2,"{""description"":""Thermostat"",""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""auto"",""heat""],""read"":true,""write"":true},""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+28,RUN-028,T05_R1_NL,T05,R1_NL,S1,S1,"The device exposes local_temperature, one or more writable temperature setpoints, system_mode, fan_mode.",TO_BE_SELECTED,0,128,PENDING
+29,RUN-029,E01_R1_NL,E01,R1_NL,S2,S2,"The device publishes measured temperature, remaining battery percentage.",TO_BE_SELECTED,0,128,PENDING
+30,RUN-030,K01_R1_NL,K01,R1_NL,S3,S3,"The device exposes a lock-status value and an explicit unlock operation, remaining battery level.",TO_BE_SELECTED,0,128,PENDING
+31,RUN-031,K04_R2_STRUCTURED,K04,R2_STRUCTURED,S1,S1,"{""properties"":{""lock"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""door_state"":{""type"":""enum"",""values"":[""open"",""closed""],""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+32,RUN-032,L04_R3_API_TELEMETRY,L04,R3_API_TELEMETRY,S2,S2,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)
+get_color_temp() -> mired
+set_color_temp(value:mired)",TO_BE_SELECTED,0,128,PENDING
+33,RUN-033,E03_R1_NL,E03,R1_NL,S2,S2,"The device publishes measured temperature, relative humidity, remaining battery percentage.",TO_BE_SELECTED,0,128,PENDING
+34,RUN-034,L05_R1_NL,L05,R1_NL,S3,S3,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted, its white color temperature can be changed, its emitted color can be selected using color coordinates.",TO_BE_SELECTED,0,128,PENDING
+35,RUN-035,L06_R1_NL,L06,R1_NL,S3,S3,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted, its white color temperature can be changed, its emitted color can be selected using color coordinates.",TO_BE_SELECTED,0,128,PENDING
+36,RUN-036,M04_R3_API_TELEMETRY,M04,R3_API_TELEMETRY,S2,S2,"device_description -> Smart motion sensor
+occupancy -> boolean
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+37,RUN-037,T06_R2_STRUCTURED,T06,R2_STRUCTURED,S2,S2,"{""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""heat"",""cool"",""auto""],""read"":true,""write"":true},""fan_mode"":{""type"":""enum"",""values"":[""auto"",""low"",""medium"",""high""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+38,RUN-038,T03_R1_NL,T03,R1_NL,S3,S3,"The device exposes local_temperature, one or more writable temperature setpoints, system_mode.",TO_BE_SELECTED,0,128,PENDING
+39,RUN-039,E06_R2_STRUCTURED,E06,R2_STRUCTURED,S1,S1,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""humidity"":{""type"":""number"",""unit"":""%"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+40,RUN-040,L05_R3_API_TELEMETRY,L05,R3_API_TELEMETRY,S2,S2,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)
+get_color_temp() -> mired
+set_color_temp(value:mired)
+get_color_xy() -> {x,y}
+set_color_xy(x,y)",TO_BE_SELECTED,0,128,PENDING
+41,RUN-041,P01_R1_NL,P01,R1_NL,S1,S1,The device is a smart outlet where the outlet state can be switched on or off.,TO_BE_SELECTED,0,128,PENDING
+42,RUN-042,K06_R1_NL,K06,R1_NL,S3,S3,"The device exposes lock/unlock state and control, remaining battery level.",TO_BE_SELECTED,0,128,PENDING
+43,RUN-043,K04_R3_API_TELEMETRY,K04,R3_API_TELEMETRY,S2,S2,"get_lock_state() -> locked|unlocked
+set_lock_state(locked|unlocked)
+door_state -> open|closed
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+44,RUN-044,M06_R2_STRUCTURED,M06,R2_STRUCTURED,S1,S1,"{""properties"":{""presence"":{""type"":""boolean"",""read"":true,""write"":false},""motion_state"":{""type"":""enum"",""values"":[""none"",""static"",""small"",""large""],""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+45,RUN-045,K02_R1_NL,K02,R1_NL,S3,S3,"The device exposes lock/unlock state and control, remaining battery level.",TO_BE_SELECTED,0,128,PENDING
+46,RUN-046,L05_R2_STRUCTURED,L05,R2_STRUCTURED,S3,S3,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true},""color_temp"":{""type"":""number"",""unit"":""mired"",""read"":true,""write"":true},""color_xy"":{""type"":""object"",""fields"":[""x"",""y""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+47,RUN-047,K06_R1_NL,K06,R1_NL,S2,S2,"The device exposes lock/unlock state and control, remaining battery level.",TO_BE_SELECTED,0,128,PENDING
+48,RUN-048,M05_R1_NL,M05,R1_NL,S1,S1,"The device is documented as human presence sensor exposing a presence boolean and battery percentage. It exposes a presence boolean, battery percentage.",TO_BE_SELECTED,0,128,PENDING
+49,RUN-049,M04_R3_API_TELEMETRY,M04,R3_API_TELEMETRY,S1,S1,"device_description -> Smart motion sensor
+occupancy -> boolean
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+50,RUN-050,M02_R1_NL,M02,R1_NL,S3,S3,"The device is documented as device is documented as a motion sensor while reporting a binary occupancy property and battery percentage. It exposes an occupancy-style binary signal, battery percentage.",TO_BE_SELECTED,0,128,PENDING
+51,RUN-051,K06_R3_API_TELEMETRY,K06,R3_API_TELEMETRY,S2,S2,"get_lock_state() -> locked|unlocked
+set_lock_state(locked|unlocked)
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+52,RUN-052,M01_R2_STRUCTURED,M01,R2_STRUCTURED,S1,S1,"{""properties"":{""occupancy"":{""type"":""boolean"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+53,RUN-053,L03_R3_API_TELEMETRY,L03,R3_API_TELEMETRY,S1,S1,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)
+get_color_xy() -> {x,y}
+set_color_xy(x,y)",TO_BE_SELECTED,0,128,PENDING
+54,RUN-054,L02_R1_NL,L02,R1_NL,S2,S2,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted, its white color temperature can be changed.",TO_BE_SELECTED,0,128,PENDING
+55,RUN-055,E05_R2_STRUCTURED,E05,R2_STRUCTURED,S1,S1,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""humidity"":{""type"":""number"",""unit"":""%"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+56,RUN-056,L03_R2_STRUCTURED,L03,R2_STRUCTURED,S2,S2,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true},""color_xy"":{""type"":""object"",""fields"":[""x"",""y""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+57,RUN-057,P03_R1_NL,P03,R1_NL,S1,S1,"The device is a smart outlet where the outlet state can be switched on or off, instantaneous electrical power is reported, accumulated energy consumption is reported.",TO_BE_SELECTED,0,128,PENDING
+58,RUN-058,L05_R2_STRUCTURED,L05,R2_STRUCTURED,S1,S1,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true},""color_temp"":{""type"":""number"",""unit"":""mired"",""read"":true,""write"":true},""color_xy"":{""type"":""object"",""fields"":[""x"",""y""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+59,RUN-059,T01_R3_API_TELEMETRY,T01,R3_API_TELEMETRY,S1,S1,"local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+system_mode -> off|heat|cool|auto
+set_system_mode(mode)",TO_BE_SELECTED,0,128,PENDING
+60,RUN-060,K06_R2_STRUCTURED,K06,R2_STRUCTURED,S3,S3,"{""properties"":{""lock"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+61,RUN-061,M02_R2_STRUCTURED,M02,R2_STRUCTURED,S2,S2,"{""description"":""Zigbee PIR sensor"",""properties"":{""occupancy"":{""type"":""boolean"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+62,RUN-062,L06_R2_STRUCTURED,L06,R2_STRUCTURED,S2,S2,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true},""color_temp"":{""type"":""number"",""unit"":""mired"",""read"":true,""write"":true},""color_xy"":{""type"":""object"",""fields"":[""x"",""y""],""read"":true,""write"":true},""color_hs"":{""type"":""object"",""fields"":[""hue"",""saturation""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+63,RUN-063,K02_R2_STRUCTURED,K02,R2_STRUCTURED,S1,S1,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""lock"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+64,RUN-064,K05_R2_STRUCTURED,K05,R2_STRUCTURED,S2,S2,"{""properties"":{""lock"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""door_state"":{""type"":""enum"",""values"":[""open"",""closed""],""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+65,RUN-065,P05_R3_API_TELEMETRY,P05,R3_API_TELEMETRY,S3,S3,"get_state() -> ON|OFF
+set_state(ON|OFF)
+power -> number W
+energy -> number kWh",TO_BE_SELECTED,0,128,PENDING
+66,RUN-066,T06_R3_API_TELEMETRY,T06,R3_API_TELEMETRY,S3,S3,"local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+system_mode -> off|heat|cool|auto
+set_system_mode(mode)
+fan_mode -> auto|low|medium|high
+set_fan_mode(mode)",TO_BE_SELECTED,0,128,PENDING
+67,RUN-067,M03_R3_API_TELEMETRY,M03,R3_API_TELEMETRY,S3,S3,"device_description -> Motion sensor
+occupancy -> boolean
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+68,RUN-068,K04_R1_NL,K04,R1_NL,S3,S3,"The device exposes lock/unlock state and control, a separate physical door-state value, remaining battery level.",TO_BE_SELECTED,0,128,PENDING
+69,RUN-069,P03_R2_STRUCTURED,P03,R2_STRUCTURED,S3,S3,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""power"":{""type"":""number"",""unit"":""W"",""read"":true,""write"":false},""energy"":{""type"":""number"",""unit"":""kWh"",""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+70,RUN-070,M02_R2_STRUCTURED,M02,R2_STRUCTURED,S1,S1,"{""description"":""Zigbee PIR sensor"",""properties"":{""occupancy"":{""type"":""boolean"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+71,RUN-071,E03_R2_STRUCTURED,E03,R2_STRUCTURED,S2,S2,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""humidity"":{""type"":""number"",""unit"":""%"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+72,RUN-072,E05_R2_STRUCTURED,E05,R2_STRUCTURED,S3,S3,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""humidity"":{""type"":""number"",""unit"":""%"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+73,RUN-073,E05_R3_API_TELEMETRY,E05,R3_API_TELEMETRY,S1,S1,"temperature -> number °C
+humidity -> number %
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+74,RUN-074,E02_R2_STRUCTURED,E02,R2_STRUCTURED,S3,S3,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""humidity"":{""type"":""number"",""unit"":""%"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+75,RUN-075,E04_R3_API_TELEMETRY,E04,R3_API_TELEMETRY,S1,S1,"temperature -> number °C
+humidity -> number %
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+76,RUN-076,L05_R3_API_TELEMETRY,L05,R3_API_TELEMETRY,S3,S3,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)
+get_color_temp() -> mired
+set_color_temp(value:mired)
+get_color_xy() -> {x,y}
+set_color_xy(x,y)",TO_BE_SELECTED,0,128,PENDING
+77,RUN-077,M05_R2_STRUCTURED,M05,R2_STRUCTURED,S3,S3,"{""properties"":{""presence"":{""type"":""boolean"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+78,RUN-078,T04_R3_API_TELEMETRY,T04,R3_API_TELEMETRY,S3,S3,"local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+occupied_cooling_setpoint -> °C
+set_cooling_setpoint(value:°C)
+system_mode -> off|heat|cool|auto
+set_system_mode(mode)
+fan_mode -> auto|low|medium|high
+set_fan_mode(mode)",TO_BE_SELECTED,0,128,PENDING
+79,RUN-079,T01_R1_NL,T01,R1_NL,S1,S1,"The device exposes local_temperature, one or more writable temperature setpoints, system_mode.",TO_BE_SELECTED,0,128,PENDING
+80,RUN-080,L06_R1_NL,L06,R1_NL,S2,S2,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted, its white color temperature can be changed, its emitted color can be selected using color coordinates.",TO_BE_SELECTED,0,128,PENDING
+81,RUN-081,P02_R2_STRUCTURED,P02,R2_STRUCTURED,S2,S2,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+82,RUN-082,M05_R1_NL,M05,R1_NL,S2,S2,"The device is documented as human presence sensor exposing a presence boolean and battery percentage. It exposes a presence boolean, battery percentage.",TO_BE_SELECTED,0,128,PENDING
+83,RUN-083,P01_R3_API_TELEMETRY,P01,R3_API_TELEMETRY,S1,S1,"get_state() -> ON|OFF
+set_state(ON|OFF)",TO_BE_SELECTED,0,128,PENDING
+84,RUN-084,K06_R3_API_TELEMETRY,K06,R3_API_TELEMETRY,S1,S1,"get_lock_state() -> locked|unlocked
+set_lock_state(locked|unlocked)
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+85,RUN-085,T06_R3_API_TELEMETRY,T06,R3_API_TELEMETRY,S2,S2,"local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+system_mode -> off|heat|cool|auto
+set_system_mode(mode)
+fan_mode -> auto|low|medium|high
+set_fan_mode(mode)",TO_BE_SELECTED,0,128,PENDING
+86,RUN-086,E01_R1_NL,E01,R1_NL,S1,S1,"The device publishes measured temperature, remaining battery percentage.",TO_BE_SELECTED,0,128,PENDING
+87,RUN-087,M06_R3_API_TELEMETRY,M06,R3_API_TELEMETRY,S1,S1,"presence -> boolean
+motion_state -> none|static|small|large
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+88,RUN-088,P03_R1_NL,P03,R1_NL,S2,S2,"The device is a smart outlet where the outlet state can be switched on or off, instantaneous electrical power is reported, accumulated energy consumption is reported.",TO_BE_SELECTED,0,128,PENDING
+89,RUN-089,M02_R3_API_TELEMETRY,M02,R3_API_TELEMETRY,S3,S3,"device_description -> Zigbee PIR sensor
+occupancy -> boolean
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+90,RUN-090,L01_R1_NL,L01,R1_NL,S2,S2,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted.",TO_BE_SELECTED,0,128,PENDING
+91,RUN-091,T06_R1_NL,T06,R1_NL,S3,S3,"The device exposes local_temperature, one or more writable temperature setpoints, system_mode, fan_mode.",TO_BE_SELECTED,0,128,PENDING
+92,RUN-092,T04_R3_API_TELEMETRY,T04,R3_API_TELEMETRY,S2,S2,"local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+occupied_cooling_setpoint -> °C
+set_cooling_setpoint(value:°C)
+system_mode -> off|heat|cool|auto
+set_system_mode(mode)
+fan_mode -> auto|low|medium|high
+set_fan_mode(mode)",TO_BE_SELECTED,0,128,PENDING
+93,RUN-093,M04_R2_STRUCTURED,M04,R2_STRUCTURED,S1,S1,"{""description"":""Smart motion sensor"",""properties"":{""occupancy"":{""type"":""boolean"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+94,RUN-094,P06_R3_API_TELEMETRY,P06,R3_API_TELEMETRY,S1,S1,"get_state() -> ON|OFF
+set_state(ON|OFF)
+power -> number W
+energy -> number kWh",TO_BE_SELECTED,0,128,PENDING
+95,RUN-095,M05_R3_API_TELEMETRY,M05,R3_API_TELEMETRY,S3,S3,"presence -> boolean
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+96,RUN-096,P02_R1_NL,P02,R1_NL,S2,S2,The device is a smart outlet where the outlet state can be switched on or off.,TO_BE_SELECTED,0,128,PENDING
+97,RUN-097,T01_R2_STRUCTURED,T01,R2_STRUCTURED,S2,S2,"{""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""heat"",""cool"",""auto""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+98,RUN-098,P05_R1_NL,P05,R1_NL,S3,S3,"The device is a smart outlet where the outlet state can be switched on or off, instantaneous electrical power is reported, accumulated energy consumption is reported.",TO_BE_SELECTED,0,128,PENDING
+99,RUN-099,M03_R3_API_TELEMETRY,M03,R3_API_TELEMETRY,S2,S2,"device_description -> Motion sensor
+occupancy -> boolean
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+100,RUN-100,T06_R3_API_TELEMETRY,T06,R3_API_TELEMETRY,S1,S1,"local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+system_mode -> off|heat|cool|auto
+set_system_mode(mode)
+fan_mode -> auto|low|medium|high
+set_fan_mode(mode)",TO_BE_SELECTED,0,128,PENDING
+101,RUN-101,L01_R2_STRUCTURED,L01,R2_STRUCTURED,S1,S1,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+102,RUN-102,P06_R2_STRUCTURED,P06,R2_STRUCTURED,S3,S3,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""power"":{""type"":""number"",""unit"":""W"",""read"":true,""write"":false},""energy"":{""type"":""number"",""unit"":""kWh"",""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+103,RUN-103,K03_R2_STRUCTURED,K03,R2_STRUCTURED,S3,S3,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""lock"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+104,RUN-104,L04_R2_STRUCTURED,L04,R2_STRUCTURED,S3,S3,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true},""color_temp"":{""type"":""number"",""unit"":""mired"",""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+105,RUN-105,T01_R3_API_TELEMETRY,T01,R3_API_TELEMETRY,S3,S3,"local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+system_mode -> off|heat|cool|auto
+set_system_mode(mode)",TO_BE_SELECTED,0,128,PENDING
+106,RUN-106,E04_R3_API_TELEMETRY,E04,R3_API_TELEMETRY,S3,S3,"temperature -> number °C
+humidity -> number %
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+107,RUN-107,E06_R2_STRUCTURED,E06,R2_STRUCTURED,S3,S3,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""humidity"":{""type"":""number"",""unit"":""%"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+108,RUN-108,L01_R3_API_TELEMETRY,L01,R3_API_TELEMETRY,S2,S2,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)",TO_BE_SELECTED,0,128,PENDING
+109,RUN-109,T03_R1_NL,T03,R1_NL,S2,S2,"The device exposes local_temperature, one or more writable temperature setpoints, system_mode.",TO_BE_SELECTED,0,128,PENDING
+110,RUN-110,K02_R1_NL,K02,R1_NL,S1,S1,"The device exposes lock/unlock state and control, remaining battery level.",TO_BE_SELECTED,0,128,PENDING
+111,RUN-111,P06_R3_API_TELEMETRY,P06,R3_API_TELEMETRY,S2,S2,"get_state() -> ON|OFF
+set_state(ON|OFF)
+power -> number W
+energy -> number kWh",TO_BE_SELECTED,0,128,PENDING
+112,RUN-112,K03_R2_STRUCTURED,K03,R2_STRUCTURED,S1,S1,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""lock"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+113,RUN-113,E02_R1_NL,E02,R1_NL,S1,S1,"The device publishes measured temperature, relative humidity, remaining battery percentage.",TO_BE_SELECTED,0,128,PENDING
+114,RUN-114,P06_R1_NL,P06,R1_NL,S1,S1,"The device is a smart outlet where the outlet state can be switched on or off, instantaneous electrical power is reported, accumulated energy consumption is reported.",TO_BE_SELECTED,0,128,PENDING
+115,RUN-115,E02_R2_STRUCTURED,E02,R2_STRUCTURED,S2,S2,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""humidity"":{""type"":""number"",""unit"":""%"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+116,RUN-116,T01_R1_NL,T01,R1_NL,S2,S2,"The device exposes local_temperature, one or more writable temperature setpoints, system_mode.",TO_BE_SELECTED,0,128,PENDING
+117,RUN-117,E02_R3_API_TELEMETRY,E02,R3_API_TELEMETRY,S2,S2,"temperature -> number °C
+humidity -> number %
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+118,RUN-118,K05_R1_NL,K05,R1_NL,S1,S1,"The device exposes lock/unlock state and control, a separate physical door-state value, remaining battery level.",TO_BE_SELECTED,0,128,PENDING
+119,RUN-119,P04_R1_NL,P04,R1_NL,S2,S2,"The device is a smart outlet where the outlet state can be switched on or off, instantaneous electrical power is reported, accumulated energy consumption is reported.",TO_BE_SELECTED,0,128,PENDING
+120,RUN-120,L04_R2_STRUCTURED,L04,R2_STRUCTURED,S2,S2,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true},""color_temp"":{""type"":""number"",""unit"":""mired"",""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+121,RUN-121,M06_R1_NL,M06,R1_NL,S2,S2,"The device is documented as human-presence sensor exposing presence plus motion_state and battery. It exposes a presence boolean, a motion_state value, battery percentage.",TO_BE_SELECTED,0,128,PENDING
+122,RUN-122,E03_R2_STRUCTURED,E03,R2_STRUCTURED,S1,S1,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""humidity"":{""type"":""number"",""unit"":""%"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+123,RUN-123,E04_R1_NL,E04,R1_NL,S3,S3,"The device publishes measured temperature, relative humidity, remaining battery percentage.",TO_BE_SELECTED,0,128,PENDING
+124,RUN-124,L04_R3_API_TELEMETRY,L04,R3_API_TELEMETRY,S3,S3,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)
+get_color_temp() -> mired
+set_color_temp(value:mired)",TO_BE_SELECTED,0,128,PENDING
+125,RUN-125,E03_R2_STRUCTURED,E03,R2_STRUCTURED,S3,S3,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""humidity"":{""type"":""number"",""unit"":""%"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+126,RUN-126,M06_R1_NL,M06,R1_NL,S3,S3,"The device is documented as human-presence sensor exposing presence plus motion_state and battery. It exposes a presence boolean, a motion_state value, battery percentage.",TO_BE_SELECTED,0,128,PENDING
+127,RUN-127,L02_R2_STRUCTURED,L02,R2_STRUCTURED,S1,S1,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true},""color_temp"":{""type"":""number"",""unit"":""mired"",""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+128,RUN-128,M05_R2_STRUCTURED,M05,R2_STRUCTURED,S2,S2,"{""properties"":{""presence"":{""type"":""boolean"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+129,RUN-129,K03_R1_NL,K03,R1_NL,S2,S2,"The device exposes lock/unlock state and control, remaining battery level.",TO_BE_SELECTED,0,128,PENDING
+130,RUN-130,M02_R3_API_TELEMETRY,M02,R3_API_TELEMETRY,S1,S1,"device_description -> Zigbee PIR sensor
+occupancy -> boolean
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+131,RUN-131,P01_R2_STRUCTURED,P01,R2_STRUCTURED,S3,S3,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+132,RUN-132,K05_R2_STRUCTURED,K05,R2_STRUCTURED,S1,S1,"{""properties"":{""lock"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""door_state"":{""type"":""enum"",""values"":[""open"",""closed""],""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+133,RUN-133,E04_R2_STRUCTURED,E04,R2_STRUCTURED,S1,S1,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""humidity"":{""type"":""number"",""unit"":""%"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+134,RUN-134,M05_R3_API_TELEMETRY,M05,R3_API_TELEMETRY,S1,S1,"presence -> boolean
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+135,RUN-135,K02_R3_API_TELEMETRY,K02,R3_API_TELEMETRY,S2,S2,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_lock_state() -> locked|unlocked
+set_lock_state(locked|unlocked)
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+136,RUN-136,T01_R1_NL,T01,R1_NL,S3,S3,"The device exposes local_temperature, one or more writable temperature setpoints, system_mode.",TO_BE_SELECTED,0,128,PENDING
+137,RUN-137,E01_R1_NL,E01,R1_NL,S3,S3,"The device publishes measured temperature, remaining battery percentage.",TO_BE_SELECTED,0,128,PENDING
+138,RUN-138,K06_R3_API_TELEMETRY,K06,R3_API_TELEMETRY,S3,S3,"get_lock_state() -> locked|unlocked
+set_lock_state(locked|unlocked)
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+139,RUN-139,L04_R1_NL,L04,R1_NL,S1,S1,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted, its white color temperature can be changed.",TO_BE_SELECTED,0,128,PENDING
+140,RUN-140,K03_R1_NL,K03,R1_NL,S1,S1,"The device exposes lock/unlock state and control, remaining battery level.",TO_BE_SELECTED,0,128,PENDING
+141,RUN-141,K04_R3_API_TELEMETRY,K04,R3_API_TELEMETRY,S1,S1,"get_lock_state() -> locked|unlocked
+set_lock_state(locked|unlocked)
+door_state -> open|closed
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+142,RUN-142,P03_R2_STRUCTURED,P03,R2_STRUCTURED,S1,S1,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""power"":{""type"":""number"",""unit"":""W"",""read"":true,""write"":false},""energy"":{""type"":""number"",""unit"":""kWh"",""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+143,RUN-143,T06_R2_STRUCTURED,T06,R2_STRUCTURED,S1,S1,"{""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""heat"",""cool"",""auto""],""read"":true,""write"":true},""fan_mode"":{""type"":""enum"",""values"":[""auto"",""low"",""medium"",""high""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+144,RUN-144,K01_R3_API_TELEMETRY,K01,R3_API_TELEMETRY,S2,S2,"lock_status -> locked|unlocked
+unlock_door(pin)
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+145,RUN-145,M01_R3_API_TELEMETRY,M01,R3_API_TELEMETRY,S3,S3,"occupancy -> boolean
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+146,RUN-146,T03_R2_STRUCTURED,T03,R2_STRUCTURED,S2,S2,"{""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""occupied_cooling_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""heat"",""cool"",""auto""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+147,RUN-147,P03_R1_NL,P03,R1_NL,S3,S3,"The device is a smart outlet where the outlet state can be switched on or off, instantaneous electrical power is reported, accumulated energy consumption is reported.",TO_BE_SELECTED,0,128,PENDING
+148,RUN-148,K01_R2_STRUCTURED,K01,R2_STRUCTURED,S1,S1,"{""properties"":{""lock_status"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""unlock_door"":{""type"":""command"",""write"":true},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+149,RUN-149,T02_R3_API_TELEMETRY,T02,R3_API_TELEMETRY,S3,S3,"device_description -> Thermostat
+local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+system_mode -> off|auto|heat
+set_system_mode(mode)
+get_state() -> ON|OFF
+set_state(ON|OFF)",TO_BE_SELECTED,0,128,PENDING
+150,RUN-150,P02_R2_STRUCTURED,P02,R2_STRUCTURED,S3,S3,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+151,RUN-151,E01_R3_API_TELEMETRY,E01,R3_API_TELEMETRY,S2,S2,"temperature -> number °C
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+152,RUN-152,M01_R1_NL,M01,R1_NL,S3,S3,"The device is documented as pir motion sensor. It exposes an occupancy-style binary signal, battery percentage.",TO_BE_SELECTED,0,128,PENDING
+153,RUN-153,K02_R1_NL,K02,R1_NL,S2,S2,"The device exposes lock/unlock state and control, remaining battery level.",TO_BE_SELECTED,0,128,PENDING
+154,RUN-154,T05_R2_STRUCTURED,T05,R2_STRUCTURED,S1,S1,"{""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""heat"",""cool"",""auto""],""read"":true,""write"":true},""fan_mode"":{""type"":""enum"",""values"":[""auto"",""low"",""medium"",""high""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+155,RUN-155,L05_R1_NL,L05,R1_NL,S1,S1,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted, its white color temperature can be changed, its emitted color can be selected using color coordinates.",TO_BE_SELECTED,0,128,PENDING
+156,RUN-156,T04_R1_NL,T04,R1_NL,S3,S3,"The device exposes local_temperature, one or more writable temperature setpoints, system_mode, fan_mode.",TO_BE_SELECTED,0,128,PENDING
+157,RUN-157,E04_R1_NL,E04,R1_NL,S2,S2,"The device publishes measured temperature, relative humidity, remaining battery percentage.",TO_BE_SELECTED,0,128,PENDING
+158,RUN-158,P01_R1_NL,P01,R1_NL,S2,S2,The device is a smart outlet where the outlet state can be switched on or off.,TO_BE_SELECTED,0,128,PENDING
+159,RUN-159,M01_R3_API_TELEMETRY,M01,R3_API_TELEMETRY,S2,S2,"occupancy -> boolean
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+160,RUN-160,E05_R1_NL,E05,R1_NL,S3,S3,"The device publishes measured temperature, relative humidity, remaining battery percentage.",TO_BE_SELECTED,0,128,PENDING
+161,RUN-161,K04_R1_NL,K04,R1_NL,S2,S2,"The device exposes lock/unlock state and control, a separate physical door-state value, remaining battery level.",TO_BE_SELECTED,0,128,PENDING
+162,RUN-162,M05_R2_STRUCTURED,M05,R2_STRUCTURED,S1,S1,"{""properties"":{""presence"":{""type"":""boolean"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+163,RUN-163,T01_R2_STRUCTURED,T01,R2_STRUCTURED,S1,S1,"{""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""heat"",""cool"",""auto""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+164,RUN-164,M06_R2_STRUCTURED,M06,R2_STRUCTURED,S2,S2,"{""properties"":{""presence"":{""type"":""boolean"",""read"":true,""write"":false},""motion_state"":{""type"":""enum"",""values"":[""none"",""static"",""small"",""large""],""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+165,RUN-165,L02_R2_STRUCTURED,L02,R2_STRUCTURED,S2,S2,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true},""color_temp"":{""type"":""number"",""unit"":""mired"",""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+166,RUN-166,M03_R3_API_TELEMETRY,M03,R3_API_TELEMETRY,S1,S1,"device_description -> Motion sensor
+occupancy -> boolean
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+167,RUN-167,E02_R1_NL,E02,R1_NL,S2,S2,"The device publishes measured temperature, relative humidity, remaining battery percentage.",TO_BE_SELECTED,0,128,PENDING
+168,RUN-168,K03_R3_API_TELEMETRY,K03,R3_API_TELEMETRY,S2,S2,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_lock_state() -> locked|unlocked
+set_lock_state(locked|unlocked)
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+169,RUN-169,M02_R1_NL,M02,R1_NL,S1,S1,"The device is documented as device is documented as a motion sensor while reporting a binary occupancy property and battery percentage. It exposes an occupancy-style binary signal, battery percentage.",TO_BE_SELECTED,0,128,PENDING
+170,RUN-170,T02_R1_NL,T02,R1_NL,S2,S2,"The device is a thermostat that reports local_temperature, allows a temperature setpoint to be changed, exposes system_mode, and provides a separate ON/OFF state that can be read and written.",TO_BE_SELECTED,0,128,PENDING
+171,RUN-171,P02_R1_NL,P02,R1_NL,S3,S3,The device is a smart outlet where the outlet state can be switched on or off.,TO_BE_SELECTED,0,128,PENDING
+172,RUN-172,L02_R1_NL,L02,R1_NL,S3,S3,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted, its white color temperature can be changed.",TO_BE_SELECTED,0,128,PENDING
+173,RUN-173,L01_R2_STRUCTURED,L01,R2_STRUCTURED,S2,S2,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+174,RUN-174,L02_R3_API_TELEMETRY,L02,R3_API_TELEMETRY,S2,S2,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)
+get_color_temp() -> mired
+set_color_temp(value:mired)",TO_BE_SELECTED,0,128,PENDING
+175,RUN-175,E06_R1_NL,E06,R1_NL,S3,S3,"The device publishes measured temperature, relative humidity, remaining battery percentage.",TO_BE_SELECTED,0,128,PENDING
+176,RUN-176,K04_R2_STRUCTURED,K04,R2_STRUCTURED,S3,S3,"{""properties"":{""lock"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""door_state"":{""type"":""enum"",""values"":[""open"",""closed""],""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+177,RUN-177,L03_R1_NL,L03,R1_NL,S1,S1,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted, its emitted color can be selected using color coordinates.",TO_BE_SELECTED,0,128,PENDING
+178,RUN-178,E01_R2_STRUCTURED,E01,R2_STRUCTURED,S3,S3,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+179,RUN-179,K06_R2_STRUCTURED,K06,R2_STRUCTURED,S2,S2,"{""properties"":{""lock"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+180,RUN-180,P06_R1_NL,P06,R1_NL,S3,S3,"The device is a smart outlet where the outlet state can be switched on or off, instantaneous electrical power is reported, accumulated energy consumption is reported.",TO_BE_SELECTED,0,128,PENDING
+181,RUN-181,T01_R2_STRUCTURED,T01,R2_STRUCTURED,S3,S3,"{""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""heat"",""cool"",""auto""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+182,RUN-182,L04_R1_NL,L04,R1_NL,S2,S2,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted, its white color temperature can be changed.",TO_BE_SELECTED,0,128,PENDING
+183,RUN-183,K06_R2_STRUCTURED,K06,R2_STRUCTURED,S1,S1,"{""properties"":{""lock"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+184,RUN-184,P05_R1_NL,P05,R1_NL,S1,S1,"The device is a smart outlet where the outlet state can be switched on or off, instantaneous electrical power is reported, accumulated energy consumption is reported.",TO_BE_SELECTED,0,128,PENDING
+185,RUN-185,P02_R3_API_TELEMETRY,P02,R3_API_TELEMETRY,S3,S3,"get_state() -> ON|OFF
+set_state(ON|OFF)",TO_BE_SELECTED,0,128,PENDING
+186,RUN-186,M03_R1_NL,M03,R1_NL,S2,S2,"The device is documented as smart motion sensor using an occupancy-style binary report and exposing battery level. It exposes an occupancy-style binary signal, battery percentage.",TO_BE_SELECTED,0,128,PENDING
+187,RUN-187,M03_R1_NL,M03,R1_NL,S3,S3,"The device is documented as smart motion sensor using an occupancy-style binary report and exposing battery level. It exposes an occupancy-style binary signal, battery percentage.",TO_BE_SELECTED,0,128,PENDING
+188,RUN-188,K05_R3_API_TELEMETRY,K05,R3_API_TELEMETRY,S3,S3,"get_lock_state() -> locked|unlocked
+set_lock_state(locked|unlocked)
+door_state -> open|closed
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+189,RUN-189,P03_R2_STRUCTURED,P03,R2_STRUCTURED,S2,S2,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""power"":{""type"":""number"",""unit"":""W"",""read"":true,""write"":false},""energy"":{""type"":""number"",""unit"":""kWh"",""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+190,RUN-190,L05_R3_API_TELEMETRY,L05,R3_API_TELEMETRY,S1,S1,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)
+get_color_temp() -> mired
+set_color_temp(value:mired)
+get_color_xy() -> {x,y}
+set_color_xy(x,y)",TO_BE_SELECTED,0,128,PENDING
+191,RUN-191,T02_R3_API_TELEMETRY,T02,R3_API_TELEMETRY,S2,S2,"device_description -> Thermostat
+local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+system_mode -> off|auto|heat
+set_system_mode(mode)
+get_state() -> ON|OFF
+set_state(ON|OFF)",TO_BE_SELECTED,0,128,PENDING
+192,RUN-192,K02_R3_API_TELEMETRY,K02,R3_API_TELEMETRY,S3,S3,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_lock_state() -> locked|unlocked
+set_lock_state(locked|unlocked)
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+193,RUN-193,P05_R1_NL,P05,R1_NL,S2,S2,"The device is a smart outlet where the outlet state can be switched on or off, instantaneous electrical power is reported, accumulated energy consumption is reported.",TO_BE_SELECTED,0,128,PENDING
+194,RUN-194,T03_R2_STRUCTURED,T03,R2_STRUCTURED,S1,S1,"{""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""occupied_cooling_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""heat"",""cool"",""auto""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+195,RUN-195,P04_R3_API_TELEMETRY,P04,R3_API_TELEMETRY,S1,S1,"get_state() -> ON|OFF
+set_state(ON|OFF)
+power -> number W
+energy -> number kWh",TO_BE_SELECTED,0,128,PENDING
+196,RUN-196,M03_R2_STRUCTURED,M03,R2_STRUCTURED,S2,S2,"{""description"":""Motion sensor"",""properties"":{""occupancy"":{""type"":""boolean"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+197,RUN-197,T03_R3_API_TELEMETRY,T03,R3_API_TELEMETRY,S3,S3,"local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+occupied_cooling_setpoint -> °C
+set_cooling_setpoint(value:°C)
+system_mode -> off|heat|cool|auto
+set_system_mode(mode)",TO_BE_SELECTED,0,128,PENDING
+198,RUN-198,L06_R1_NL,L06,R1_NL,S1,S1,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted, its white color temperature can be changed, its emitted color can be selected using color coordinates.",TO_BE_SELECTED,0,128,PENDING
+199,RUN-199,M02_R2_STRUCTURED,M02,R2_STRUCTURED,S3,S3,"{""description"":""Zigbee PIR sensor"",""properties"":{""occupancy"":{""type"":""boolean"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+200,RUN-200,T05_R3_API_TELEMETRY,T05,R3_API_TELEMETRY,S3,S3,"local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+system_mode -> off|heat|cool|auto
+set_system_mode(mode)
+fan_mode -> auto|low|medium|high
+set_fan_mode(mode)",TO_BE_SELECTED,0,128,PENDING
+201,RUN-201,E05_R1_NL,E05,R1_NL,S1,S1,"The device publishes measured temperature, relative humidity, remaining battery percentage.",TO_BE_SELECTED,0,128,PENDING
+202,RUN-202,P04_R3_API_TELEMETRY,P04,R3_API_TELEMETRY,S2,S2,"get_state() -> ON|OFF
+set_state(ON|OFF)
+power -> number W
+energy -> number kWh",TO_BE_SELECTED,0,128,PENDING
+203,RUN-203,K04_R2_STRUCTURED,K04,R2_STRUCTURED,S2,S2,"{""properties"":{""lock"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""door_state"":{""type"":""enum"",""values"":[""open"",""closed""],""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+204,RUN-204,K01_R1_NL,K01,R1_NL,S2,S2,"The device exposes a lock-status value and an explicit unlock operation, remaining battery level.",TO_BE_SELECTED,0,128,PENDING
+205,RUN-205,L06_R3_API_TELEMETRY,L06,R3_API_TELEMETRY,S1,S1,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)
+get_color_temp() -> mired
+set_color_temp(value:mired)
+get_color_xy() -> {x,y}
+set_color_xy(x,y)
+get_color_hs() -> {hue,saturation}
+set_color_hs(hue,saturation)",TO_BE_SELECTED,0,128,PENDING
+206,RUN-206,T03_R2_STRUCTURED,T03,R2_STRUCTURED,S3,S3,"{""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""occupied_cooling_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""heat"",""cool"",""auto""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+207,RUN-207,P02_R3_API_TELEMETRY,P02,R3_API_TELEMETRY,S1,S1,"get_state() -> ON|OFF
+set_state(ON|OFF)",TO_BE_SELECTED,0,128,PENDING
+208,RUN-208,M05_R3_API_TELEMETRY,M05,R3_API_TELEMETRY,S2,S2,"presence -> boolean
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+209,RUN-209,T04_R2_STRUCTURED,T04,R2_STRUCTURED,S3,S3,"{""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""occupied_cooling_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""heat"",""cool"",""auto""],""read"":true,""write"":true},""fan_mode"":{""type"":""enum"",""values"":[""auto"",""low"",""medium"",""high""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+210,RUN-210,P03_R3_API_TELEMETRY,P03,R3_API_TELEMETRY,S2,S2,"get_state() -> ON|OFF
+set_state(ON|OFF)
+power -> number W
+energy -> number kWh",TO_BE_SELECTED,0,128,PENDING
+211,RUN-211,E06_R1_NL,E06,R1_NL,S2,S2,"The device publishes measured temperature, relative humidity, remaining battery percentage.",TO_BE_SELECTED,0,128,PENDING
+212,RUN-212,T05_R3_API_TELEMETRY,T05,R3_API_TELEMETRY,S2,S2,"local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+system_mode -> off|heat|cool|auto
+set_system_mode(mode)
+fan_mode -> auto|low|medium|high
+set_fan_mode(mode)",TO_BE_SELECTED,0,128,PENDING
+213,RUN-213,E05_R1_NL,E05,R1_NL,S2,S2,"The device publishes measured temperature, relative humidity, remaining battery percentage.",TO_BE_SELECTED,0,128,PENDING
+214,RUN-214,P05_R3_API_TELEMETRY,P05,R3_API_TELEMETRY,S1,S1,"get_state() -> ON|OFF
+set_state(ON|OFF)
+power -> number W
+energy -> number kWh",TO_BE_SELECTED,0,128,PENDING
+215,RUN-215,M04_R2_STRUCTURED,M04,R2_STRUCTURED,S3,S3,"{""description"":""Smart motion sensor"",""properties"":{""occupancy"":{""type"":""boolean"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+216,RUN-216,L06_R2_STRUCTURED,L06,R2_STRUCTURED,S1,S1,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true},""color_temp"":{""type"":""number"",""unit"":""mired"",""read"":true,""write"":true},""color_xy"":{""type"":""object"",""fields"":[""x"",""y""],""read"":true,""write"":true},""color_hs"":{""type"":""object"",""fields"":[""hue"",""saturation""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+217,RUN-217,T03_R3_API_TELEMETRY,T03,R3_API_TELEMETRY,S2,S2,"local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+occupied_cooling_setpoint -> °C
+set_cooling_setpoint(value:°C)
+system_mode -> off|heat|cool|auto
+set_system_mode(mode)",TO_BE_SELECTED,0,128,PENDING
+218,RUN-218,K04_R3_API_TELEMETRY,K04,R3_API_TELEMETRY,S3,S3,"get_lock_state() -> locked|unlocked
+set_lock_state(locked|unlocked)
+door_state -> open|closed
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+219,RUN-219,T05_R1_NL,T05,R1_NL,S3,S3,"The device exposes local_temperature, one or more writable temperature setpoints, system_mode, fan_mode.",TO_BE_SELECTED,0,128,PENDING
+220,RUN-220,P04_R1_NL,P04,R1_NL,S3,S3,"The device is a smart outlet where the outlet state can be switched on or off, instantaneous electrical power is reported, accumulated energy consumption is reported.",TO_BE_SELECTED,0,128,PENDING
+221,RUN-221,E04_R1_NL,E04,R1_NL,S1,S1,"The device publishes measured temperature, relative humidity, remaining battery percentage.",TO_BE_SELECTED,0,128,PENDING
+222,RUN-222,T04_R1_NL,T04,R1_NL,S1,S1,"The device exposes local_temperature, one or more writable temperature setpoints, system_mode, fan_mode.",TO_BE_SELECTED,0,128,PENDING
+223,RUN-223,K01_R1_NL,K01,R1_NL,S1,S1,"The device exposes a lock-status value and an explicit unlock operation, remaining battery level.",TO_BE_SELECTED,0,128,PENDING
+224,RUN-224,E02_R1_NL,E02,R1_NL,S3,S3,"The device publishes measured temperature, relative humidity, remaining battery percentage.",TO_BE_SELECTED,0,128,PENDING
+225,RUN-225,P05_R2_STRUCTURED,P05,R2_STRUCTURED,S3,S3,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""power"":{""type"":""number"",""unit"":""W"",""read"":true,""write"":false},""energy"":{""type"":""number"",""unit"":""kWh"",""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+226,RUN-226,L01_R1_NL,L01,R1_NL,S3,S3,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted.",TO_BE_SELECTED,0,128,PENDING
+227,RUN-227,L02_R3_API_TELEMETRY,L02,R3_API_TELEMETRY,S3,S3,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)
+get_color_temp() -> mired
+set_color_temp(value:mired)",TO_BE_SELECTED,0,128,PENDING
+228,RUN-228,T06_R2_STRUCTURED,T06,R2_STRUCTURED,S3,S3,"{""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""heat"",""cool"",""auto""],""read"":true,""write"":true},""fan_mode"":{""type"":""enum"",""values"":[""auto"",""low"",""medium"",""high""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+229,RUN-229,E03_R1_NL,E03,R1_NL,S1,S1,"The device publishes measured temperature, relative humidity, remaining battery percentage.",TO_BE_SELECTED,0,128,PENDING
+230,RUN-230,M01_R2_STRUCTURED,M01,R2_STRUCTURED,S3,S3,"{""properties"":{""occupancy"":{""type"":""boolean"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+231,RUN-231,E06_R3_API_TELEMETRY,E06,R3_API_TELEMETRY,S1,S1,"temperature -> number °C
+humidity -> number %
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+232,RUN-232,E03_R1_NL,E03,R1_NL,S3,S3,"The device publishes measured temperature, relative humidity, remaining battery percentage.",TO_BE_SELECTED,0,128,PENDING
+233,RUN-233,E03_R3_API_TELEMETRY,E03,R3_API_TELEMETRY,S1,S1,"temperature -> number °C
+humidity -> number %
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+234,RUN-234,K03_R2_STRUCTURED,K03,R2_STRUCTURED,S2,S2,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""lock"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+235,RUN-235,P05_R2_STRUCTURED,P05,R2_STRUCTURED,S2,S2,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""power"":{""type"":""number"",""unit"":""W"",""read"":true,""write"":false},""energy"":{""type"":""number"",""unit"":""kWh"",""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+236,RUN-236,M02_R3_API_TELEMETRY,M02,R3_API_TELEMETRY,S2,S2,"device_description -> Zigbee PIR sensor
+occupancy -> boolean
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+237,RUN-237,K05_R2_STRUCTURED,K05,R2_STRUCTURED,S3,S3,"{""properties"":{""lock"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""door_state"":{""type"":""enum"",""values"":[""open"",""closed""],""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+238,RUN-238,M03_R2_STRUCTURED,M03,R2_STRUCTURED,S3,S3,"{""description"":""Motion sensor"",""properties"":{""occupancy"":{""type"":""boolean"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+239,RUN-239,K04_R1_NL,K04,R1_NL,S1,S1,"The device exposes lock/unlock state and control, a separate physical door-state value, remaining battery level.",TO_BE_SELECTED,0,128,PENDING
+240,RUN-240,P06_R3_API_TELEMETRY,P06,R3_API_TELEMETRY,S3,S3,"get_state() -> ON|OFF
+set_state(ON|OFF)
+power -> number W
+energy -> number kWh",TO_BE_SELECTED,0,128,PENDING
+241,RUN-241,L01_R1_NL,L01,R1_NL,S1,S1,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted.",TO_BE_SELECTED,0,128,PENDING
+242,RUN-242,K02_R3_API_TELEMETRY,K02,R3_API_TELEMETRY,S1,S1,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_lock_state() -> locked|unlocked
+set_lock_state(locked|unlocked)
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+243,RUN-243,L06_R3_API_TELEMETRY,L06,R3_API_TELEMETRY,S3,S3,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)
+get_color_temp() -> mired
+set_color_temp(value:mired)
+get_color_xy() -> {x,y}
+set_color_xy(x,y)
+get_color_hs() -> {hue,saturation}
+set_color_hs(hue,saturation)",TO_BE_SELECTED,0,128,PENDING
+244,RUN-244,T04_R3_API_TELEMETRY,T04,R3_API_TELEMETRY,S1,S1,"local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+occupied_cooling_setpoint -> °C
+set_cooling_setpoint(value:°C)
+system_mode -> off|heat|cool|auto
+set_system_mode(mode)
+fan_mode -> auto|low|medium|high
+set_fan_mode(mode)",TO_BE_SELECTED,0,128,PENDING
+245,RUN-245,L06_R3_API_TELEMETRY,L06,R3_API_TELEMETRY,S2,S2,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)
+get_color_temp() -> mired
+set_color_temp(value:mired)
+get_color_xy() -> {x,y}
+set_color_xy(x,y)
+get_color_hs() -> {hue,saturation}
+set_color_hs(hue,saturation)",TO_BE_SELECTED,0,128,PENDING
+246,RUN-246,L02_R1_NL,L02,R1_NL,S1,S1,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted, its white color temperature can be changed.",TO_BE_SELECTED,0,128,PENDING
+247,RUN-247,E06_R3_API_TELEMETRY,E06,R3_API_TELEMETRY,S3,S3,"temperature -> number °C
+humidity -> number %
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+248,RUN-248,M05_R1_NL,M05,R1_NL,S3,S3,"The device is documented as human presence sensor exposing a presence boolean and battery percentage. It exposes a presence boolean, battery percentage.",TO_BE_SELECTED,0,128,PENDING
+249,RUN-249,P06_R2_STRUCTURED,P06,R2_STRUCTURED,S2,S2,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""power"":{""type"":""number"",""unit"":""W"",""read"":true,""write"":false},""energy"":{""type"":""number"",""unit"":""kWh"",""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+250,RUN-250,T02_R3_API_TELEMETRY,T02,R3_API_TELEMETRY,S1,S1,"device_description -> Thermostat
+local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+system_mode -> off|auto|heat
+set_system_mode(mode)
+get_state() -> ON|OFF
+set_state(ON|OFF)",TO_BE_SELECTED,0,128,PENDING
+251,RUN-251,K01_R2_STRUCTURED,K01,R2_STRUCTURED,S3,S3,"{""properties"":{""lock_status"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""unlock_door"":{""type"":""command"",""write"":true},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+252,RUN-252,E01_R3_API_TELEMETRY,E01,R3_API_TELEMETRY,S3,S3,"temperature -> number °C
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+253,RUN-253,K03_R3_API_TELEMETRY,K03,R3_API_TELEMETRY,S3,S3,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_lock_state() -> locked|unlocked
+set_lock_state(locked|unlocked)
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+254,RUN-254,T05_R1_NL,T05,R1_NL,S2,S2,"The device exposes local_temperature, one or more writable temperature setpoints, system_mode, fan_mode.",TO_BE_SELECTED,0,128,PENDING
+255,RUN-255,P01_R3_API_TELEMETRY,P01,R3_API_TELEMETRY,S3,S3,"get_state() -> ON|OFF
+set_state(ON|OFF)",TO_BE_SELECTED,0,128,PENDING
+256,RUN-256,L03_R1_NL,L03,R1_NL,S3,S3,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted, its emitted color can be selected using color coordinates.",TO_BE_SELECTED,0,128,PENDING
+257,RUN-257,K02_R2_STRUCTURED,K02,R2_STRUCTURED,S3,S3,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""lock"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+258,RUN-258,E06_R3_API_TELEMETRY,E06,R3_API_TELEMETRY,S2,S2,"temperature -> number °C
+humidity -> number %
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+259,RUN-259,K01_R3_API_TELEMETRY,K01,R3_API_TELEMETRY,S1,S1,"lock_status -> locked|unlocked
+unlock_door(pin)
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+260,RUN-260,P01_R3_API_TELEMETRY,P01,R3_API_TELEMETRY,S2,S2,"get_state() -> ON|OFF
+set_state(ON|OFF)",TO_BE_SELECTED,0,128,PENDING
+261,RUN-261,T03_R1_NL,T03,R1_NL,S1,S1,"The device exposes local_temperature, one or more writable temperature setpoints, system_mode.",TO_BE_SELECTED,0,128,PENDING
+262,RUN-262,K02_R2_STRUCTURED,K02,R2_STRUCTURED,S2,S2,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""lock"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+263,RUN-263,E05_R3_API_TELEMETRY,E05,R3_API_TELEMETRY,S3,S3,"temperature -> number °C
+humidity -> number %
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+264,RUN-264,M01_R1_NL,M01,R1_NL,S2,S2,"The device is documented as pir motion sensor. It exposes an occupancy-style binary signal, battery percentage.",TO_BE_SELECTED,0,128,PENDING
+265,RUN-265,P01_R2_STRUCTURED,P01,R2_STRUCTURED,S1,S1,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+266,RUN-266,M06_R2_STRUCTURED,M06,R2_STRUCTURED,S3,S3,"{""properties"":{""presence"":{""type"":""boolean"",""read"":true,""write"":false},""motion_state"":{""type"":""enum"",""values"":[""none"",""static"",""small"",""large""],""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+267,RUN-267,L02_R3_API_TELEMETRY,L02,R3_API_TELEMETRY,S1,S1,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)
+get_color_temp() -> mired
+set_color_temp(value:mired)",TO_BE_SELECTED,0,128,PENDING
+268,RUN-268,L04_R1_NL,L04,R1_NL,S3,S3,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted, its white color temperature can be changed.",TO_BE_SELECTED,0,128,PENDING
+269,RUN-269,T03_R3_API_TELEMETRY,T03,R3_API_TELEMETRY,S1,S1,"local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+occupied_cooling_setpoint -> °C
+set_cooling_setpoint(value:°C)
+system_mode -> off|heat|cool|auto
+set_system_mode(mode)",TO_BE_SELECTED,0,128,PENDING
+270,RUN-270,T01_R3_API_TELEMETRY,T01,R3_API_TELEMETRY,S2,S2,"local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+system_mode -> off|heat|cool|auto
+set_system_mode(mode)",TO_BE_SELECTED,0,128,PENDING
+271,RUN-271,L02_R2_STRUCTURED,L02,R2_STRUCTURED,S3,S3,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true},""color_temp"":{""type"":""number"",""unit"":""mired"",""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+272,RUN-272,T05_R3_API_TELEMETRY,T05,R3_API_TELEMETRY,S1,S1,"local_temperature -> number °C
+occupied_heating_setpoint -> °C
+set_heating_setpoint(value:°C)
+system_mode -> off|heat|cool|auto
+set_system_mode(mode)
+fan_mode -> auto|low|medium|high
+set_fan_mode(mode)",TO_BE_SELECTED,0,128,PENDING
+273,RUN-273,P02_R3_API_TELEMETRY,P02,R3_API_TELEMETRY,S2,S2,"get_state() -> ON|OFF
+set_state(ON|OFF)",TO_BE_SELECTED,0,128,PENDING
+274,RUN-274,L01_R3_API_TELEMETRY,L01,R3_API_TELEMETRY,S3,S3,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)",TO_BE_SELECTED,0,128,PENDING
+275,RUN-275,P04_R2_STRUCTURED,P04,R2_STRUCTURED,S2,S2,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""power"":{""type"":""number"",""unit"":""W"",""read"":true,""write"":false},""energy"":{""type"":""number"",""unit"":""kWh"",""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+276,RUN-276,L03_R1_NL,L03,R1_NL,S2,S2,"The device is a connected light for which its on/off state can be read and changed, its brightness level can be adjusted, its emitted color can be selected using color coordinates.",TO_BE_SELECTED,0,128,PENDING
+277,RUN-277,T02_R2_STRUCTURED,T02,R2_STRUCTURED,S1,S1,"{""description"":""Thermostat"",""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""auto"",""heat""],""read"":true,""write"":true},""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+278,RUN-278,P04_R2_STRUCTURED,P04,R2_STRUCTURED,S1,S1,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""power"":{""type"":""number"",""unit"":""W"",""read"":true,""write"":false},""energy"":{""type"":""number"",""unit"":""kWh"",""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+279,RUN-279,E02_R3_API_TELEMETRY,E02,R3_API_TELEMETRY,S1,S1,"temperature -> number °C
+humidity -> number %
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+280,RUN-280,K06_R1_NL,K06,R1_NL,S1,S1,"The device exposes lock/unlock state and control, remaining battery level.",TO_BE_SELECTED,0,128,PENDING
+281,RUN-281,E04_R2_STRUCTURED,E04,R2_STRUCTURED,S3,S3,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""humidity"":{""type"":""number"",""unit"":""%"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+282,RUN-282,L04_R2_STRUCTURED,L04,R2_STRUCTURED,S1,S1,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true},""color_temp"":{""type"":""number"",""unit"":""mired"",""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+283,RUN-283,E03_R3_API_TELEMETRY,E03,R3_API_TELEMETRY,S2,S2,"temperature -> number °C
+humidity -> number %
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+284,RUN-284,M06_R3_API_TELEMETRY,M06,R3_API_TELEMETRY,S2,S2,"presence -> boolean
+motion_state -> none|static|small|large
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+285,RUN-285,E03_R3_API_TELEMETRY,E03,R3_API_TELEMETRY,S3,S3,"temperature -> number °C
+humidity -> number %
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+286,RUN-286,M04_R2_STRUCTURED,M04,R2_STRUCTURED,S2,S2,"{""description"":""Smart motion sensor"",""properties"":{""occupancy"":{""type"":""boolean"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+287,RUN-287,P01_R2_STRUCTURED,P01,R2_STRUCTURED,S2,S2,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+288,RUN-288,P04_R1_NL,P04,R1_NL,S1,S1,"The device is a smart outlet where the outlet state can be switched on or off, instantaneous electrical power is reported, accumulated energy consumption is reported.",TO_BE_SELECTED,0,128,PENDING
+289,RUN-289,E02_R3_API_TELEMETRY,E02,R3_API_TELEMETRY,S3,S3,"temperature -> number °C
+humidity -> number %
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+290,RUN-290,P02_R2_STRUCTURED,P02,R2_STRUCTURED,S1,S1,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+291,RUN-291,P06_R2_STRUCTURED,P06,R2_STRUCTURED,S1,S1,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""power"":{""type"":""number"",""unit"":""W"",""read"":true,""write"":false},""energy"":{""type"":""number"",""unit"":""kWh"",""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+292,RUN-292,T06_R1_NL,T06,R1_NL,S1,S1,"The device exposes local_temperature, one or more writable temperature setpoints, system_mode, fan_mode.",TO_BE_SELECTED,0,128,PENDING
+293,RUN-293,T04_R1_NL,T04,R1_NL,S2,S2,"The device exposes local_temperature, one or more writable temperature setpoints, system_mode, fan_mode.",TO_BE_SELECTED,0,128,PENDING
+294,RUN-294,L04_R3_API_TELEMETRY,L04,R3_API_TELEMETRY,S1,S1,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)
+get_color_temp() -> mired
+set_color_temp(value:mired)",TO_BE_SELECTED,0,128,PENDING
+295,RUN-295,K05_R3_API_TELEMETRY,K05,R3_API_TELEMETRY,S2,S2,"get_lock_state() -> locked|unlocked
+set_lock_state(locked|unlocked)
+door_state -> open|closed
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+296,RUN-296,K05_R1_NL,K05,R1_NL,S2,S2,"The device exposes lock/unlock state and control, a separate physical door-state value, remaining battery level.",TO_BE_SELECTED,0,128,PENDING
+297,RUN-297,T02_R1_NL,T02,R1_NL,S1,S1,"The device is a thermostat that reports local_temperature, allows a temperature setpoint to be changed, exposes system_mode, and provides a separate ON/OFF state that can be read and written.",TO_BE_SELECTED,0,128,PENDING
+298,RUN-298,E01_R3_API_TELEMETRY,E01,R3_API_TELEMETRY,S1,S1,"temperature -> number °C
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+299,RUN-299,T02_R2_STRUCTURED,T02,R2_STRUCTURED,S3,S3,"{""description"":""Thermostat"",""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""auto"",""heat""],""read"":true,""write"":true},""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+300,RUN-300,E04_R3_API_TELEMETRY,E04,R3_API_TELEMETRY,S2,S2,"temperature -> number °C
+humidity -> number %
+battery -> integer 0..100 %",TO_BE_SELECTED,0,128,PENDING
+301,RUN-301,K05_R1_NL,K05,R1_NL,S3,S3,"The device exposes lock/unlock state and control, a separate physical door-state value, remaining battery level.",TO_BE_SELECTED,0,128,PENDING
+302,RUN-302,E02_R2_STRUCTURED,E02,R2_STRUCTURED,S1,S1,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""humidity"":{""type"":""number"",""unit"":""%"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+303,RUN-303,E05_R2_STRUCTURED,E05,R2_STRUCTURED,S2,S2,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""humidity"":{""type"":""number"",""unit"":""%"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+304,RUN-304,P05_R2_STRUCTURED,P05,R2_STRUCTURED,S1,S1,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""power"":{""type"":""number"",""unit"":""W"",""read"":true,""write"":false},""energy"":{""type"":""number"",""unit"":""kWh"",""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+305,RUN-305,M02_R1_NL,M02,R1_NL,S2,S2,"The device is documented as device is documented as a motion sensor while reporting a binary occupancy property and battery percentage. It exposes an occupancy-style binary signal, battery percentage.",TO_BE_SELECTED,0,128,PENDING
+306,RUN-306,L03_R2_STRUCTURED,L03,R2_STRUCTURED,S3,S3,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true},""color_xy"":{""type"":""object"",""fields"":[""x"",""y""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+307,RUN-307,P05_R3_API_TELEMETRY,P05,R3_API_TELEMETRY,S2,S2,"get_state() -> ON|OFF
+set_state(ON|OFF)
+power -> number W
+energy -> number kWh",TO_BE_SELECTED,0,128,PENDING
+308,RUN-308,E01_R2_STRUCTURED,E01,R2_STRUCTURED,S1,S1,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+309,RUN-309,L06_R2_STRUCTURED,L06,R2_STRUCTURED,S3,S3,"{""properties"":{""state"":{""type"":""enum"",""values"":[""ON"",""OFF""],""read"":true,""write"":true},""brightness"":{""type"":""integer"",""min"":0,""max"":254,""read"":true,""write"":true},""color_temp"":{""type"":""number"",""unit"":""mired"",""read"":true,""write"":true},""color_xy"":{""type"":""object"",""fields"":[""x"",""y""],""read"":true,""write"":true},""color_hs"":{""type"":""object"",""fields"":[""hue"",""saturation""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+310,RUN-310,P02_R1_NL,P02,R1_NL,S1,S1,The device is a smart outlet where the outlet state can be switched on or off.,TO_BE_SELECTED,0,128,PENDING
+311,RUN-311,M04_R1_NL,M04,R1_NL,S1,S1,"The device is documented as smart presence sensor exposing binary occupancy and battery percentage. It exposes an occupancy-style binary signal, battery percentage.",TO_BE_SELECTED,0,128,PENDING
+312,RUN-312,T04_R2_STRUCTURED,T04,R2_STRUCTURED,S2,S2,"{""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""occupied_cooling_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""heat"",""cool"",""auto""],""read"":true,""write"":true},""fan_mode"":{""type"":""enum"",""values"":[""auto"",""low"",""medium"",""high""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+313,RUN-313,T02_R1_NL,T02,R1_NL,S3,S3,"The device is a thermostat that reports local_temperature, allows a temperature setpoint to be changed, exposes system_mode, and provides a separate ON/OFF state that can be read and written.",TO_BE_SELECTED,0,128,PENDING
+314,RUN-314,P01_R1_NL,P01,R1_NL,S3,S3,The device is a smart outlet where the outlet state can be switched on or off.,TO_BE_SELECTED,0,128,PENDING
+315,RUN-315,M03_R2_STRUCTURED,M03,R2_STRUCTURED,S1,S1,"{""description"":""Motion sensor"",""properties"":{""occupancy"":{""type"":""boolean"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+316,RUN-316,P03_R3_API_TELEMETRY,P03,R3_API_TELEMETRY,S3,S3,"get_state() -> ON|OFF
+set_state(ON|OFF)
+power -> number W
+energy -> number kWh",TO_BE_SELECTED,0,128,PENDING
+317,RUN-317,M01_R2_STRUCTURED,M01,R2_STRUCTURED,S2,S2,"{""properties"":{""occupancy"":{""type"":""boolean"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+318,RUN-318,M03_R1_NL,M03,R1_NL,S1,S1,"The device is documented as smart motion sensor using an occupancy-style binary report and exposing battery level. It exposes an occupancy-style binary signal, battery percentage.",TO_BE_SELECTED,0,128,PENDING
+319,RUN-319,K01_R2_STRUCTURED,K01,R2_STRUCTURED,S2,S2,"{""properties"":{""lock_status"":{""type"":""enum"",""values"":[""locked"",""unlocked""],""read"":true,""write"":true},""unlock_door"":{""type"":""command"",""write"":true},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
+320,RUN-320,T05_R2_STRUCTURED,T05,R2_STRUCTURED,S2,S2,"{""properties"":{""local_temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""occupied_heating_setpoint"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":true},""system_mode"":{""type"":""enum"",""values"":[""off"",""heat"",""cool"",""auto""],""read"":true,""write"":true},""fan_mode"":{""type"":""enum"",""values"":[""auto"",""low"",""medium"",""high""],""read"":true,""write"":true}}}",TO_BE_SELECTED,0,128,PENDING
+321,RUN-321,L03_R3_API_TELEMETRY,L03,R3_API_TELEMETRY,S2,S2,"get_state() -> ON|OFF
+set_state(ON|OFF)
+get_brightness() -> 0..254
+set_brightness(value:0..254)
+get_color_xy() -> {x,y}
+set_color_xy(x,y)",TO_BE_SELECTED,0,128,PENDING
+322,RUN-322,T06_R1_NL,T06,R1_NL,S2,S2,"The device exposes local_temperature, one or more writable temperature setpoints, system_mode, fan_mode.",TO_BE_SELECTED,0,128,PENDING
+323,RUN-323,P03_R3_API_TELEMETRY,P03,R3_API_TELEMETRY,S1,S1,"get_state() -> ON|OFF
+set_state(ON|OFF)
+power -> number W
+energy -> number kWh",TO_BE_SELECTED,0,128,PENDING
+324,RUN-324,E06_R2_STRUCTURED,E06,R2_STRUCTURED,S2,S2,"{""properties"":{""temperature"":{""type"":""number"",""unit"":""°C"",""read"":true,""write"":false},""humidity"":{""type"":""number"",""unit"":""%"",""read"":true,""write"":false},""battery"":{""type"":""number"",""unit"":""%"",""min"":0,""max"":100,""read"":true,""write"":false}}}",TO_BE_SELECTED,0,128,PENDING
