@@ -1,0 +1,4 @@
+Technical representation:
+{{INPUT_TEXT}}
+
+Return the capability mapping according to the enforced response schema. Do not add explanatory text.
