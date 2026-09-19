@@ -1,0 +1,44 @@
+Use the following examples only to understand the mapping task. The examples are not part of the evaluation dataset.
+
+Example input:
+Generic connected outlet:
+- relay_state: ON|OFF, readable and writable
+- active_power: 18.7 W
+- total_energy: 2.41 kWh
+- indicator_led_level: 0..100
+Example output:
+{"capabilities":["power_control","power_sensing","energy_consumption_sensing"]}
+
+Example input:
+Generic PIR motion detector.
+Telemetry:
+occupancy -> boolean
+battery -> 0..100 %
+Example output:
+{"capabilities":["motion_detection","battery_level_sensing"]}
+
+Example input:
+Generic radar human-presence sensor.
+Properties:
+presence -> boolean
+motion_state -> none|small|large
+illuminance -> lux
+Example output:
+{"capabilities":["occupancy_detection","motion_detection"]}
+
+Example input:
+Generic HVAC controller:
+local_temperature -> °C
+target_temperature -> °C, readable/writable
+system_mode -> off|heat|cool|auto, readable/writable
+fan_mode -> auto|low|medium|high, readable/writable
+Example output:
+{"capabilities":["temperature_sensing","temperature_setpoint_control","hvac_mode_control","fan_control"]}
+
+Target technical representation:
+{{INPUT_TEXT}}
+
+Return only this JSON object:
+{"capabilities":["canonical_id", "..."]}
+
+Use an empty array when no allowed capability is supported.
