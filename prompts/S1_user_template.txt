@@ -1,0 +1,7 @@
+Technical representation:
+{{INPUT_TEXT}}
+
+Return only this JSON object:
+{"capabilities":["canonical_id", "..."]}
+
+Use an empty array when no allowed capability is supported.
