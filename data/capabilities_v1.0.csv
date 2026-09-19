@@ -1,0 +1,17 @@
+capability_id,definition,interaction_type
+power_control,Control device on/off state,Action/Property
+brightness_control,Adjust light intensity,Property/Action
+color_control,Adjust emitted color,Property/Action
+color_temperature_control,Adjust white color temperature,Property/Action
+temperature_sensing,Measure ambient/device temperature,Property
+humidity_sensing,Measure relative humidity,Property
+motion_detection,Detect motion/activity,Event/Property
+occupancy_detection,Detect continuing presence/occupancy,Event/Property
+lock_control,Lock or unlock a smart lock,Action/Property
+door_state_sensing,Sense physical door open/closed state,Property/Event
+temperature_setpoint_control,Read/write target temperature,Property/Action
+hvac_mode_control,Select HVAC operating mode,Property/Action
+fan_control,Select/control fan operating mode,Property/Action
+power_sensing,Measure instantaneous active power,Property
+energy_consumption_sensing,Measure accumulated electrical energy,Property
+battery_level_sensing,Measure remaining battery level,Property
