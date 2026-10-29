@@ -4,9 +4,8 @@ __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 .DS_Store
+
+# Transient API/debug artifacts only. Definitive CSV results are versioned.
 results/raw/*.jsonl
-results/raw/*.csv
-!results/raw/.gitkeep
-results/processed/*.csv
-results/processed/*.json
-!results/processed/.gitkeep
+results/raw/*_partial.csv
+results/raw/*_tmp.csv

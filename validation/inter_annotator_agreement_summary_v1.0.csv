@@ -1,0 +1,12 @@
+metric,value
+devices,36
+capabilities,16
+binary_decisions,576
+agreements,576
+disagreements,0
+observed_agreement,1.000000
+cohens_kappa,1.000000
+device_exact_agreement_count,36
+device_exact_agreement_rate,1.000000
+gold_positive_labels,99
+second_annotator_positive_labels,99

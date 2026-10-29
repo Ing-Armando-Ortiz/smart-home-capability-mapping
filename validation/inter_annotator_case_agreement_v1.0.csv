@@ -1,0 +1,37 @@
+case_id,binary_agreement_count,binary_decisions,exact_capability_set_agreement,gold_capabilities,second_annotator_capabilities,confidence,comments
+M04,16,16,True,battery_level_sensing; occupancy_detection,battery_level_sensing; occupancy_detection,Medium,"Page calls it a presence sensor and exposes only 'occupancy'; no PIR/motion wording, so motion_detection=No under the shared rule."
+L05,16,16,True,brightness_control; color_control; color_temperature_control; power_control,brightness_control; color_control; color_temperature_control; power_control,High,
+P06,16,16,True,energy_consumption_sensing; power_control; power_sensing,energy_consumption_sensing; power_control; power_sensing,High,
+K03,16,16,True,battery_level_sensing; lock_control,battery_level_sensing; lock_control,High,
+T06,16,16,True,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,Medium,"fan_mode is listed as a climate feature but the page gives no type/values; marked Yes because the property is explicitly exposed. Flag for adjudication. system_mode 'off' is a mode value, not a separate on/off switch, so power_control=No."
+M05,16,16,True,battery_level_sensing; occupancy_detection,battery_level_sensing; occupancy_detection,High,
+P05,16,16,True,energy_consumption_sensing; power_control; power_sensing,energy_consumption_sensing; power_control; power_sensing,Medium,"led_brightness (0-100%) controls the plug's indicator LED, not a light function, so brightness_control=No. Flag for adjudication."
+T02,16,16,True,hvac_mode_control; power_control; temperature_sensing; temperature_setpoint_control,hvac_mode_control; power_control; temperature_sensing; temperature_setpoint_control,High,
+E03,16,16,True,battery_level_sensing; humidity_sensing; temperature_sensing,battery_level_sensing; humidity_sensing; temperature_sensing,High,
+L06,16,16,True,brightness_control; color_control; color_temperature_control; power_control,brightness_control; color_control; color_temperature_control; power_control,High,
+M01,16,16,True,battery_level_sensing; motion_detection,battery_level_sensing; motion_detection,High,"Documented as PIR sensor; the 'occupancy' field is the middleware name for the motion report, so motion_detection=Yes, occupancy_detection=No per shared rule."
+K06,16,16,True,battery_level_sensing; lock_control,battery_level_sensing; lock_control,High,
+M03,16,16,True,battery_level_sensing; motion_detection,battery_level_sensing; motion_detection,High,Documented as a motion sensor; 'occupancy' field treated as motion report per shared rule.
+M02,16,16,True,battery_level_sensing; motion_detection,battery_level_sensing; motion_detection,High,Documented as a motion sensor; 'occupancy' field treated as motion report per shared rule.
+E05,16,16,True,battery_level_sensing; humidity_sensing; temperature_sensing,battery_level_sensing; humidity_sensing; temperature_sensing,High,
+T04,16,16,True,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,Medium,"fan_mode is listed as a climate feature but the page gives no type/values; marked Yes because the property is explicitly exposed. Flag for adjudication. Only battery voltage (mV) is exposed, no % level, so battery_level_sensing=No; rule gap on voltage-only reports, flag for adjudication."
+P01,16,16,True,power_control,power_control,High,
+K02,16,16,True,battery_level_sensing; lock_control,battery_level_sensing; lock_control,High,
+K05,16,16,True,battery_level_sensing; door_state_sensing; lock_control,battery_level_sensing; door_state_sensing; lock_control,High,
+M06,16,16,True,battery_level_sensing; motion_detection; occupancy_detection,battery_level_sensing; motion_detection; occupancy_detection,Medium,"Hybrid PIR+radar: PIR/motion fields (motion_state, motion_detection_mode) support motion; presence with keep time supports sustained occupancy. Both marked Yes; flag for adjudication."
+L03,16,16,True,brightness_control; color_control; power_control,brightness_control; color_control; power_control,High,
+L02,16,16,True,brightness_control; color_temperature_control; power_control,brightness_control; color_temperature_control; power_control,High,
+E06,16,16,True,battery_level_sensing; humidity_sensing; temperature_sensing,battery_level_sensing; humidity_sensing; temperature_sensing,High,
+K01,16,16,True,battery_level_sensing; lock_control,battery_level_sensing; lock_control,Medium,Page exposes lock status and an unlock action but no explicit lock command; marked Yes because lock/unlock state and action are both exposed. Flag for adjudication.
+T01,16,16,True,hvac_mode_control; temperature_sensing; temperature_setpoint_control,hvac_mode_control; temperature_sensing; temperature_setpoint_control,High,
+E04,16,16,True,battery_level_sensing; humidity_sensing; temperature_sensing,battery_level_sensing; humidity_sensing; temperature_sensing,High,
+K04,16,16,True,battery_level_sensing; door_state_sensing; lock_control,battery_level_sensing; door_state_sensing; lock_control,High,
+L01,16,16,True,brightness_control; power_control,brightness_control; power_control,High,
+P02,16,16,True,power_control,power_control,High,
+T05,16,16,True,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,Medium,fan_mode is listed as a climate feature but the page gives no type/values; marked Yes because the property is explicitly exposed. Flag for adjudication.
+E02,16,16,True,battery_level_sensing; humidity_sensing; temperature_sensing,battery_level_sensing; humidity_sensing; temperature_sensing,High,
+T03,16,16,True,hvac_mode_control; temperature_sensing; temperature_setpoint_control,hvac_mode_control; temperature_sensing; temperature_setpoint_control,High,
+E01,16,16,True,battery_level_sensing; temperature_sensing,battery_level_sensing; temperature_sensing,High,
+P03,16,16,True,energy_consumption_sensing; power_control; power_sensing,energy_consumption_sensing; power_control; power_sensing,High,
+L04,16,16,True,brightness_control; color_temperature_control; power_control,brightness_control; color_temperature_control; power_control,High,
+P04,16,16,True,energy_consumption_sensing; power_control; power_sensing,energy_consumption_sensing; power_control; power_sensing,High,

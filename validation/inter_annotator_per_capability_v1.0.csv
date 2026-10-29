@@ -1,0 +1,17 @@
+capability,agreement_count,n,agreement_rate,gold_yes,second_annotator_yes
+power_control,36,36,1.000000,13,13
+brightness_control,36,36,1.000000,6,6
+color_control,36,36,1.000000,3,3
+color_temperature_control,36,36,1.000000,4,4
+temperature_sensing,36,36,1.000000,12,12
+humidity_sensing,36,36,1.000000,5,5
+motion_detection,36,36,1.000000,4,4
+occupancy_detection,36,36,1.000000,3,3
+lock_control,36,36,1.000000,6,6
+door_state_sensing,36,36,1.000000,2,2
+temperature_setpoint_control,36,36,1.000000,6,6
+hvac_mode_control,36,36,1.000000,6,6
+fan_control,36,36,1.000000,3,3
+power_sensing,36,36,1.000000,4,4
+energy_consumption_sensing,36,36,1.000000,4,4
+battery_level_sensing,36,36,1.000000,18,18

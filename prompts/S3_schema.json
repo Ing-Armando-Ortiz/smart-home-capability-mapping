@@ -27,6 +27,8 @@
       "uniqueItems": true
     }
   },
-  "required": ["capabilities"],
+  "required": [
+    "capabilities"
+  ],
   "additionalProperties": false
 }

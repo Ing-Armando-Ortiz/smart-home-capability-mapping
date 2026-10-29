@@ -90,11 +90,10 @@ def parse_json_capabilities(raw: str):
     except Exception:
         pass
 
+    # Semantic fallback required by the preregistered scoring rule:
+    # recover only exact canonical IDs from raw output.
     if not parsed_caps:
-        parsed_caps = [
-            c for c in CAPABILITIES
-            if re.search(rf'(?<![A-Za-z0-9_]){re.escape(c)}(?![A-Za-z0-9_])', raw)
-        ]
+        parsed_caps = [c for c in CAPABILITIES if re.search(rf'(?<![A-Za-z0-9_]){re.escape(c)}(?![A-Za-z0-9_])', raw)]
     return sorted(set(parsed_caps)), json_valid, schema_valid, out_of_vocab
 
 def get_usage(response):
@@ -132,12 +131,7 @@ def select_dry_run(rows):
     chosen = []
     for strategy in ("S1", "S2", "S3"):
         for rep in ("R1_NL", "R2_STRUCTURED", "R3_API_TELEMETRY"):
-            chosen.append(
-                next(
-                    r for r in rows
-                    if r["strategy_id"] == strategy and r["representation"] == rep
-                )
-            )
+            chosen.append(next(r for r in rows if r["strategy_id"] == strategy and r["representation"] == rep))
     return chosen
 
 def run(rows, root: Path, output_path: Path, sleep_seconds: float = 0.0):
@@ -147,18 +141,9 @@ def run(rows, root: Path, output_path: Path, sleep_seconds: float = 0.0):
     client = Mistral(api_key=api_key)
 
     prompts = {
-        "S1": (
-            read_text(root/"prompts/S1_system.txt"),
-            read_text(root/"prompts/S1_user_template.txt")
-        ),
-        "S2": (
-            read_text(root/"prompts/S2_system.txt"),
-            read_text(root/"prompts/S2_user_template.txt")
-        ),
-        "S3": (
-            read_text(root/"prompts/S3_system.txt"),
-            read_text(root/"prompts/S3_user_template.txt")
-        ),
+        "S1": (read_text(root/"prompts/S1_system.txt"), read_text(root/"prompts/S1_user_template.txt")),
+        "S2": (read_text(root/"prompts/S2_system.txt"), read_text(root/"prompts/S2_user_template.txt")),
+        "S3": (read_text(root/"prompts/S3_system.txt"), read_text(root/"prompts/S3_user_template.txt")),
     }
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -196,12 +181,7 @@ def run(rows, root: Path, output_path: Path, sleep_seconds: float = 0.0):
 
             for attempt in range(3):
                 try:
-                    response = make_call(
-                        client,
-                        row["strategy_id"],
-                        system_prompt,
-                        user_prompt,
-                    )
+                    response = make_call(client, row["strategy_id"], system_prompt, user_prompt)
                     retry_count = attempt
                     break
                 except Exception as exc:
@@ -216,27 +196,13 @@ def run(rows, root: Path, output_path: Path, sleep_seconds: float = 0.0):
 
             if response is None:
                 result = dict(
-                    run_order=row["run_order"],
-                    run_id=row["run_id"],
-                    instance_id=row["instance_id"],
-                    case_id=row["case_id"],
-                    representation=row["representation"],
-                    strategy_id=row["strategy_id"],
-                    model_requested=MODEL,
-                    model_returned="",
-                    raw_response="",
-                    predicted_capabilities="[]",
-                    json_valid=False,
-                    schema_valid=False,
-                    out_of_vocab="[]",
-                    latency_ms=latency_ms,
-                    prompt_tokens="",
-                    completion_tokens="",
-                    total_tokens="",
-                    finish_reason="",
-                    retry_count=retry_count,
-                    status=status,
-                    error=error,
+                    run_order=row["run_order"], run_id=row["run_id"], instance_id=row["instance_id"],
+                    case_id=row["case_id"], representation=row["representation"],
+                    strategy_id=row["strategy_id"], model_requested=MODEL, model_returned="",
+                    raw_response="", predicted_capabilities="[]", json_valid=False, schema_valid=False,
+                    out_of_vocab="[]", latency_ms=latency_ms, prompt_tokens="",
+                    completion_tokens="", total_tokens="", finish_reason="", retry_count=retry_count,
+                    status=status, error=error,
                 )
             else:
                 raw = response.choices[0].message.content
@@ -245,29 +211,18 @@ def run(rows, root: Path, output_path: Path, sleep_seconds: float = 0.0):
                 predicted, json_valid, schema_valid, oov = parse_json_capabilities(raw)
                 pt, ct, tt = get_usage(response)
                 result = dict(
-                    run_order=row["run_order"],
-                    run_id=row["run_id"],
-                    instance_id=row["instance_id"],
-                    case_id=row["case_id"],
-                    representation=row["representation"],
-                    strategy_id=row["strategy_id"],
-                    model_requested=MODEL,
+                    run_order=row["run_order"], run_id=row["run_id"], instance_id=row["instance_id"],
+                    case_id=row["case_id"], representation=row["representation"],
+                    strategy_id=row["strategy_id"], model_requested=MODEL,
                     model_returned=getattr(response, "model", ""),
                     raw_response=raw,
                     predicted_capabilities=json.dumps(predicted, ensure_ascii=False),
-                    json_valid=json_valid,
-                    schema_valid=schema_valid,
+                    json_valid=json_valid, schema_valid=schema_valid,
                     out_of_vocab=json.dumps(oov, ensure_ascii=False),
-                    latency_ms=latency_ms,
-                    prompt_tokens=pt,
-                    completion_tokens=ct,
-                    total_tokens=tt,
+                    latency_ms=latency_ms, prompt_tokens=pt, completion_tokens=ct, total_tokens=tt,
                     finish_reason=getattr(response.choices[0], "finish_reason", ""),
-                    retry_count=retry_count,
-                    status=status,
-                    error=error,
+                    retry_count=retry_count, status=status, error=error,
                 )
-
             writer.writerow(result)
             f.flush()
             print(f'{row["run_id"]} {row["strategy_id"]} {row["instance_id"]}: {status}')
@@ -276,13 +231,9 @@ def run(rows, root: Path, output_path: Path, sleep_seconds: float = 0.0):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--payload", default="data/execution_payload_v1.3.csv")
-    parser.add_argument("--output", default="results/raw/mistral_small_2603.csv")
-    parser.add_argument(
-        "--dry-run",
-        action="store_true",
-        help="Run 9 plumbing calls only; do not use for paper scoring.",
-    )
+    parser.add_argument("--payload", default="data/execution_payload_v1.4.csv")
+    parser.add_argument("--output", default="results/raw/mistral_small_2603_v1.4.csv")
+    parser.add_argument("--dry-run", action="store_true", help="Run 9 plumbing calls only; do not use for paper scoring.")
     parser.add_argument("--sleep", type=float, default=0.0)
     args = parser.parse_args()
 
@@ -293,7 +244,6 @@ def main():
         output = root / "results/raw/dry_run_mistral_small_2603.csv"
     else:
         output = root / args.output
-
     run(rows, root, output, args.sleep)
 
 if __name__ == "__main__":

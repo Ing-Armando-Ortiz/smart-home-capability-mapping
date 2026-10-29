@@ -1,0 +1,17 @@
+capability,support,B0_f1,S1_f1,S2_f1,S3_f1
+power_control,39,1.0,0.9870129870129869,0.9870129870129869,0.9870129870129869
+brightness_control,18,1.0,1.0,1.0,1.0
+color_control,9,1.0,1.0,1.0,1.0
+color_temperature_control,12,1.0,1.0,1.0,1.0
+temperature_sensing,36,1.0,1.0,1.0,1.0
+humidity_sensing,15,1.0,1.0,1.0,1.0
+motion_detection,12,0.8333333333333334,0.26666666666666666,0.631578947368421,0.5
+occupancy_detection,9,0.6666666666666666,0.5217391304347826,0.6956521739130435,0.64
+lock_control,18,1.0,1.0,1.0,1.0
+door_state_sensing,6,1.0,1.0,1.0,1.0
+temperature_setpoint_control,18,1.0,1.0,1.0,1.0
+hvac_mode_control,18,1.0,0.9411764705882353,1.0,1.0
+fan_control,9,1.0,1.0,1.0,1.0
+power_sensing,12,1.0,1.0,1.0,1.0
+energy_consumption_sensing,12,1.0,1.0,1.0,1.0
+battery_level_sensing,54,1.0,1.0,1.0,1.0

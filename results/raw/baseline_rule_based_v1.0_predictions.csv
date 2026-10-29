@@ -1,0 +1,109 @@
+instance_id,case_id,representation,device_family,gold_capabilities,baseline_capabilities,exact_match,tp,fp,fn
+L01_R1_NL,L01,R1_NL,Smart light,brightness_control; power_control,brightness_control; power_control,1,2,0,0
+L01_R2_STRUCTURED,L01,R2_STRUCTURED,Smart light,brightness_control; power_control,brightness_control; power_control,1,2,0,0
+L01_R3_API_TELEMETRY,L01,R3_API_TELEMETRY,Smart light,brightness_control; power_control,brightness_control; power_control,1,2,0,0
+L02_R1_NL,L02,R1_NL,Smart light,brightness_control; color_temperature_control; power_control,brightness_control; color_temperature_control; power_control,1,3,0,0
+L02_R2_STRUCTURED,L02,R2_STRUCTURED,Smart light,brightness_control; color_temperature_control; power_control,brightness_control; color_temperature_control; power_control,1,3,0,0
+L02_R3_API_TELEMETRY,L02,R3_API_TELEMETRY,Smart light,brightness_control; color_temperature_control; power_control,brightness_control; color_temperature_control; power_control,1,3,0,0
+L03_R1_NL,L03,R1_NL,Smart light,brightness_control; color_control; power_control,brightness_control; color_control; power_control,1,3,0,0
+L03_R2_STRUCTURED,L03,R2_STRUCTURED,Smart light,brightness_control; color_control; power_control,brightness_control; color_control; power_control,1,3,0,0
+L03_R3_API_TELEMETRY,L03,R3_API_TELEMETRY,Smart light,brightness_control; color_control; power_control,brightness_control; color_control; power_control,1,3,0,0
+L04_R1_NL,L04,R1_NL,Smart light,brightness_control; color_temperature_control; power_control,brightness_control; color_temperature_control; power_control,1,3,0,0
+L04_R2_STRUCTURED,L04,R2_STRUCTURED,Smart light,brightness_control; color_temperature_control; power_control,brightness_control; color_temperature_control; power_control,1,3,0,0
+L04_R3_API_TELEMETRY,L04,R3_API_TELEMETRY,Smart light,brightness_control; color_temperature_control; power_control,brightness_control; color_temperature_control; power_control,1,3,0,0
+L05_R1_NL,L05,R1_NL,Smart light,brightness_control; color_control; color_temperature_control; power_control,brightness_control; color_control; color_temperature_control; power_control,1,4,0,0
+L05_R2_STRUCTURED,L05,R2_STRUCTURED,Smart light,brightness_control; color_control; color_temperature_control; power_control,brightness_control; color_control; color_temperature_control; power_control,1,4,0,0
+L05_R3_API_TELEMETRY,L05,R3_API_TELEMETRY,Smart light,brightness_control; color_control; color_temperature_control; power_control,brightness_control; color_control; color_temperature_control; power_control,1,4,0,0
+L06_R1_NL,L06,R1_NL,Smart light,brightness_control; color_control; color_temperature_control; power_control,brightness_control; color_control; color_temperature_control; power_control,1,4,0,0
+L06_R2_STRUCTURED,L06,R2_STRUCTURED,Smart light,brightness_control; color_control; color_temperature_control; power_control,brightness_control; color_control; color_temperature_control; power_control,1,4,0,0
+L06_R3_API_TELEMETRY,L06,R3_API_TELEMETRY,Smart light,brightness_control; color_control; color_temperature_control; power_control,brightness_control; color_control; color_temperature_control; power_control,1,4,0,0
+P01_R1_NL,P01,R1_NL,Smart plug,power_control,power_control,1,1,0,0
+P01_R2_STRUCTURED,P01,R2_STRUCTURED,Smart plug,power_control,power_control,1,1,0,0
+P01_R3_API_TELEMETRY,P01,R3_API_TELEMETRY,Smart plug,power_control,power_control,1,1,0,0
+P02_R1_NL,P02,R1_NL,Smart plug,power_control,power_control,1,1,0,0
+P02_R2_STRUCTURED,P02,R2_STRUCTURED,Smart plug,power_control,power_control,1,1,0,0
+P02_R3_API_TELEMETRY,P02,R3_API_TELEMETRY,Smart plug,power_control,power_control,1,1,0,0
+P03_R1_NL,P03,R1_NL,Smart plug,energy_consumption_sensing; power_control; power_sensing,energy_consumption_sensing; power_control; power_sensing,1,3,0,0
+P03_R2_STRUCTURED,P03,R2_STRUCTURED,Smart plug,energy_consumption_sensing; power_control; power_sensing,energy_consumption_sensing; power_control; power_sensing,1,3,0,0
+P03_R3_API_TELEMETRY,P03,R3_API_TELEMETRY,Smart plug,energy_consumption_sensing; power_control; power_sensing,energy_consumption_sensing; power_control; power_sensing,1,3,0,0
+P04_R1_NL,P04,R1_NL,Smart plug,energy_consumption_sensing; power_control; power_sensing,energy_consumption_sensing; power_control; power_sensing,1,3,0,0
+P04_R2_STRUCTURED,P04,R2_STRUCTURED,Smart plug,energy_consumption_sensing; power_control; power_sensing,energy_consumption_sensing; power_control; power_sensing,1,3,0,0
+P04_R3_API_TELEMETRY,P04,R3_API_TELEMETRY,Smart plug,energy_consumption_sensing; power_control; power_sensing,energy_consumption_sensing; power_control; power_sensing,1,3,0,0
+P05_R1_NL,P05,R1_NL,Smart plug,energy_consumption_sensing; power_control; power_sensing,energy_consumption_sensing; power_control; power_sensing,1,3,0,0
+P05_R2_STRUCTURED,P05,R2_STRUCTURED,Smart plug,energy_consumption_sensing; power_control; power_sensing,energy_consumption_sensing; power_control; power_sensing,1,3,0,0
+P05_R3_API_TELEMETRY,P05,R3_API_TELEMETRY,Smart plug,energy_consumption_sensing; power_control; power_sensing,energy_consumption_sensing; power_control; power_sensing,1,3,0,0
+P06_R1_NL,P06,R1_NL,Smart plug,energy_consumption_sensing; power_control; power_sensing,energy_consumption_sensing; power_control; power_sensing,1,3,0,0
+P06_R2_STRUCTURED,P06,R2_STRUCTURED,Smart plug,energy_consumption_sensing; power_control; power_sensing,energy_consumption_sensing; power_control; power_sensing,1,3,0,0
+P06_R3_API_TELEMETRY,P06,R3_API_TELEMETRY,Smart plug,energy_consumption_sensing; power_control; power_sensing,energy_consumption_sensing; power_control; power_sensing,1,3,0,0
+E01_R1_NL,E01,R1_NL,Environmental sensor,battery_level_sensing; temperature_sensing,battery_level_sensing; temperature_sensing,1,2,0,0
+E01_R2_STRUCTURED,E01,R2_STRUCTURED,Environmental sensor,battery_level_sensing; temperature_sensing,battery_level_sensing; temperature_sensing,1,2,0,0
+E01_R3_API_TELEMETRY,E01,R3_API_TELEMETRY,Environmental sensor,battery_level_sensing; temperature_sensing,battery_level_sensing; temperature_sensing,1,2,0,0
+E02_R1_NL,E02,R1_NL,Environmental sensor,battery_level_sensing; humidity_sensing; temperature_sensing,battery_level_sensing; humidity_sensing; temperature_sensing,1,3,0,0
+E02_R2_STRUCTURED,E02,R2_STRUCTURED,Environmental sensor,battery_level_sensing; humidity_sensing; temperature_sensing,battery_level_sensing; humidity_sensing; temperature_sensing,1,3,0,0
+E02_R3_API_TELEMETRY,E02,R3_API_TELEMETRY,Environmental sensor,battery_level_sensing; humidity_sensing; temperature_sensing,battery_level_sensing; humidity_sensing; temperature_sensing,1,3,0,0
+E03_R1_NL,E03,R1_NL,Environmental sensor,battery_level_sensing; humidity_sensing; temperature_sensing,battery_level_sensing; humidity_sensing; temperature_sensing,1,3,0,0
+E03_R2_STRUCTURED,E03,R2_STRUCTURED,Environmental sensor,battery_level_sensing; humidity_sensing; temperature_sensing,battery_level_sensing; humidity_sensing; temperature_sensing,1,3,0,0
+E03_R3_API_TELEMETRY,E03,R3_API_TELEMETRY,Environmental sensor,battery_level_sensing; humidity_sensing; temperature_sensing,battery_level_sensing; humidity_sensing; temperature_sensing,1,3,0,0
+E04_R1_NL,E04,R1_NL,Environmental sensor,battery_level_sensing; humidity_sensing; temperature_sensing,battery_level_sensing; humidity_sensing; temperature_sensing,1,3,0,0
+E04_R2_STRUCTURED,E04,R2_STRUCTURED,Environmental sensor,battery_level_sensing; humidity_sensing; temperature_sensing,battery_level_sensing; humidity_sensing; temperature_sensing,1,3,0,0
+E04_R3_API_TELEMETRY,E04,R3_API_TELEMETRY,Environmental sensor,battery_level_sensing; humidity_sensing; temperature_sensing,battery_level_sensing; humidity_sensing; temperature_sensing,1,3,0,0
+E05_R1_NL,E05,R1_NL,Environmental sensor,battery_level_sensing; humidity_sensing; temperature_sensing,battery_level_sensing; humidity_sensing; temperature_sensing,1,3,0,0
+E05_R2_STRUCTURED,E05,R2_STRUCTURED,Environmental sensor,battery_level_sensing; humidity_sensing; temperature_sensing,battery_level_sensing; humidity_sensing; temperature_sensing,1,3,0,0
+E05_R3_API_TELEMETRY,E05,R3_API_TELEMETRY,Environmental sensor,battery_level_sensing; humidity_sensing; temperature_sensing,battery_level_sensing; humidity_sensing; temperature_sensing,1,3,0,0
+E06_R1_NL,E06,R1_NL,Environmental sensor,battery_level_sensing; humidity_sensing; temperature_sensing,battery_level_sensing; humidity_sensing; temperature_sensing,1,3,0,0
+E06_R2_STRUCTURED,E06,R2_STRUCTURED,Environmental sensor,battery_level_sensing; humidity_sensing; temperature_sensing,battery_level_sensing; humidity_sensing; temperature_sensing,1,3,0,0
+E06_R3_API_TELEMETRY,E06,R3_API_TELEMETRY,Environmental sensor,battery_level_sensing; humidity_sensing; temperature_sensing,battery_level_sensing; humidity_sensing; temperature_sensing,1,3,0,0
+M01_R1_NL,M01,R1_NL,Motion/presence sensor,battery_level_sensing; motion_detection,battery_level_sensing; motion_detection; occupancy_detection,0,2,1,0
+M01_R2_STRUCTURED,M01,R2_STRUCTURED,Motion/presence sensor,battery_level_sensing; motion_detection,battery_level_sensing; occupancy_detection,0,1,1,1
+M01_R3_API_TELEMETRY,M01,R3_API_TELEMETRY,Motion/presence sensor,battery_level_sensing; motion_detection,battery_level_sensing; occupancy_detection,0,1,1,1
+M02_R1_NL,M02,R1_NL,Motion/presence sensor,battery_level_sensing; motion_detection,battery_level_sensing; motion_detection; occupancy_detection,0,2,1,0
+M02_R2_STRUCTURED,M02,R2_STRUCTURED,Motion/presence sensor,battery_level_sensing; motion_detection,battery_level_sensing; motion_detection; occupancy_detection,0,2,1,0
+M02_R3_API_TELEMETRY,M02,R3_API_TELEMETRY,Motion/presence sensor,battery_level_sensing; motion_detection,battery_level_sensing; motion_detection; occupancy_detection,0,2,1,0
+M03_R1_NL,M03,R1_NL,Motion/presence sensor,battery_level_sensing; motion_detection,battery_level_sensing; motion_detection; occupancy_detection,0,2,1,0
+M03_R2_STRUCTURED,M03,R2_STRUCTURED,Motion/presence sensor,battery_level_sensing; motion_detection,battery_level_sensing; motion_detection; occupancy_detection,0,2,1,0
+M03_R3_API_TELEMETRY,M03,R3_API_TELEMETRY,Motion/presence sensor,battery_level_sensing; motion_detection,battery_level_sensing; motion_detection; occupancy_detection,0,2,1,0
+M04_R1_NL,M04,R1_NL,Motion/presence sensor,battery_level_sensing; occupancy_detection,battery_level_sensing; occupancy_detection,1,2,0,0
+M04_R2_STRUCTURED,M04,R2_STRUCTURED,Motion/presence sensor,battery_level_sensing; occupancy_detection,battery_level_sensing; motion_detection; occupancy_detection,0,2,1,0
+M04_R3_API_TELEMETRY,M04,R3_API_TELEMETRY,Motion/presence sensor,battery_level_sensing; occupancy_detection,battery_level_sensing; motion_detection; occupancy_detection,0,2,1,0
+M05_R1_NL,M05,R1_NL,Motion/presence sensor,battery_level_sensing; occupancy_detection,battery_level_sensing; occupancy_detection,1,2,0,0
+M05_R2_STRUCTURED,M05,R2_STRUCTURED,Motion/presence sensor,battery_level_sensing; occupancy_detection,battery_level_sensing; occupancy_detection,1,2,0,0
+M05_R3_API_TELEMETRY,M05,R3_API_TELEMETRY,Motion/presence sensor,battery_level_sensing; occupancy_detection,battery_level_sensing; occupancy_detection,1,2,0,0
+M06_R1_NL,M06,R1_NL,Motion/presence sensor,battery_level_sensing; motion_detection; occupancy_detection,battery_level_sensing; motion_detection; occupancy_detection,1,3,0,0
+M06_R2_STRUCTURED,M06,R2_STRUCTURED,Motion/presence sensor,battery_level_sensing; motion_detection; occupancy_detection,battery_level_sensing; motion_detection; occupancy_detection,1,3,0,0
+M06_R3_API_TELEMETRY,M06,R3_API_TELEMETRY,Motion/presence sensor,battery_level_sensing; motion_detection; occupancy_detection,battery_level_sensing; motion_detection; occupancy_detection,1,3,0,0
+K01_R1_NL,K01,R1_NL,Smart lock,battery_level_sensing; lock_control,battery_level_sensing; lock_control,1,2,0,0
+K01_R2_STRUCTURED,K01,R2_STRUCTURED,Smart lock,battery_level_sensing; lock_control,battery_level_sensing; lock_control,1,2,0,0
+K01_R3_API_TELEMETRY,K01,R3_API_TELEMETRY,Smart lock,battery_level_sensing; lock_control,battery_level_sensing; lock_control,1,2,0,0
+K02_R1_NL,K02,R1_NL,Smart lock,battery_level_sensing; lock_control,battery_level_sensing; lock_control,1,2,0,0
+K02_R2_STRUCTURED,K02,R2_STRUCTURED,Smart lock,battery_level_sensing; lock_control,battery_level_sensing; lock_control,1,2,0,0
+K02_R3_API_TELEMETRY,K02,R3_API_TELEMETRY,Smart lock,battery_level_sensing; lock_control,battery_level_sensing; lock_control,1,2,0,0
+K03_R1_NL,K03,R1_NL,Smart lock,battery_level_sensing; lock_control,battery_level_sensing; lock_control,1,2,0,0
+K03_R2_STRUCTURED,K03,R2_STRUCTURED,Smart lock,battery_level_sensing; lock_control,battery_level_sensing; lock_control,1,2,0,0
+K03_R3_API_TELEMETRY,K03,R3_API_TELEMETRY,Smart lock,battery_level_sensing; lock_control,battery_level_sensing; lock_control,1,2,0,0
+K04_R1_NL,K04,R1_NL,Smart lock,battery_level_sensing; door_state_sensing; lock_control,battery_level_sensing; door_state_sensing; lock_control,1,3,0,0
+K04_R2_STRUCTURED,K04,R2_STRUCTURED,Smart lock,battery_level_sensing; door_state_sensing; lock_control,battery_level_sensing; door_state_sensing; lock_control,1,3,0,0
+K04_R3_API_TELEMETRY,K04,R3_API_TELEMETRY,Smart lock,battery_level_sensing; door_state_sensing; lock_control,battery_level_sensing; door_state_sensing; lock_control,1,3,0,0
+K05_R1_NL,K05,R1_NL,Smart lock,battery_level_sensing; door_state_sensing; lock_control,battery_level_sensing; door_state_sensing; lock_control,1,3,0,0
+K05_R2_STRUCTURED,K05,R2_STRUCTURED,Smart lock,battery_level_sensing; door_state_sensing; lock_control,battery_level_sensing; door_state_sensing; lock_control,1,3,0,0
+K05_R3_API_TELEMETRY,K05,R3_API_TELEMETRY,Smart lock,battery_level_sensing; door_state_sensing; lock_control,battery_level_sensing; door_state_sensing; lock_control,1,3,0,0
+K06_R1_NL,K06,R1_NL,Smart lock,battery_level_sensing; lock_control,battery_level_sensing; lock_control,1,2,0,0
+K06_R2_STRUCTURED,K06,R2_STRUCTURED,Smart lock,battery_level_sensing; lock_control,battery_level_sensing; lock_control,1,2,0,0
+K06_R3_API_TELEMETRY,K06,R3_API_TELEMETRY,Smart lock,battery_level_sensing; lock_control,battery_level_sensing; lock_control,1,2,0,0
+T01_R1_NL,T01,R1_NL,Thermostat/HVAC,hvac_mode_control; temperature_sensing; temperature_setpoint_control,hvac_mode_control; temperature_sensing; temperature_setpoint_control,1,3,0,0
+T01_R2_STRUCTURED,T01,R2_STRUCTURED,Thermostat/HVAC,hvac_mode_control; temperature_sensing; temperature_setpoint_control,hvac_mode_control; temperature_sensing; temperature_setpoint_control,1,3,0,0
+T01_R3_API_TELEMETRY,T01,R3_API_TELEMETRY,Thermostat/HVAC,hvac_mode_control; temperature_sensing; temperature_setpoint_control,hvac_mode_control; temperature_sensing; temperature_setpoint_control,1,3,0,0
+T02_R1_NL,T02,R1_NL,Thermostat/HVAC,hvac_mode_control; power_control; temperature_sensing; temperature_setpoint_control,hvac_mode_control; power_control; temperature_sensing; temperature_setpoint_control,1,4,0,0
+T02_R2_STRUCTURED,T02,R2_STRUCTURED,Thermostat/HVAC,hvac_mode_control; power_control; temperature_sensing; temperature_setpoint_control,hvac_mode_control; power_control; temperature_sensing; temperature_setpoint_control,1,4,0,0
+T02_R3_API_TELEMETRY,T02,R3_API_TELEMETRY,Thermostat/HVAC,hvac_mode_control; power_control; temperature_sensing; temperature_setpoint_control,hvac_mode_control; power_control; temperature_sensing; temperature_setpoint_control,1,4,0,0
+T03_R1_NL,T03,R1_NL,Thermostat/HVAC,hvac_mode_control; temperature_sensing; temperature_setpoint_control,hvac_mode_control; temperature_sensing; temperature_setpoint_control,1,3,0,0
+T03_R2_STRUCTURED,T03,R2_STRUCTURED,Thermostat/HVAC,hvac_mode_control; temperature_sensing; temperature_setpoint_control,hvac_mode_control; temperature_sensing; temperature_setpoint_control,1,3,0,0
+T03_R3_API_TELEMETRY,T03,R3_API_TELEMETRY,Thermostat/HVAC,hvac_mode_control; temperature_sensing; temperature_setpoint_control,hvac_mode_control; temperature_sensing; temperature_setpoint_control,1,3,0,0
+T04_R1_NL,T04,R1_NL,Thermostat/HVAC,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,1,4,0,0
+T04_R2_STRUCTURED,T04,R2_STRUCTURED,Thermostat/HVAC,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,1,4,0,0
+T04_R3_API_TELEMETRY,T04,R3_API_TELEMETRY,Thermostat/HVAC,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,1,4,0,0
+T05_R1_NL,T05,R1_NL,Thermostat/HVAC,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,1,4,0,0
+T05_R2_STRUCTURED,T05,R2_STRUCTURED,Thermostat/HVAC,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,1,4,0,0
+T05_R3_API_TELEMETRY,T05,R3_API_TELEMETRY,Thermostat/HVAC,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,1,4,0,0
+T06_R1_NL,T06,R1_NL,Thermostat/HVAC,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,1,4,0,0
+T06_R2_STRUCTURED,T06,R2_STRUCTURED,Thermostat/HVAC,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,1,4,0,0
+T06_R3_API_TELEMETRY,T06,R3_API_TELEMETRY,Thermostat/HVAC,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,fan_control; hvac_mode_control; temperature_sensing; temperature_setpoint_control,1,4,0,0

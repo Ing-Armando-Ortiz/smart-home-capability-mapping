@@ -1,0 +1,7 @@
+method_a,method_b,a_only_exact,b_only_exact,discordant_pairs,exact_mcnemar_p
+S1,S2,1,9,10,0.021484375
+S1,S3,0,6,6,0.03125
+S2,S3,4,2,6,0.6875
+B0,S1,7,2,9,0.1796875
+B0,S2,2,5,7,0.453125
+B0,S3,2,3,5,1.0
